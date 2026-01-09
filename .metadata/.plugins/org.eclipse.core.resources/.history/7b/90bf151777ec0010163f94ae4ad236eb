@@ -1,0 +1,18 @@
+package Java_Core;
+
+public class Demo {
+	public static void main(String[] args) {
+		int a = 10;
+		long b = a; //widening
+		System.out.println(b);
+		
+		long c = 20;
+		int d = (int)c;
+		System.out.println(d);//narrowing
+		
+		double dl = 55.55;
+		int il =(int)dl;//narrowing
+		System.out.println(il);
+	}
+
+}

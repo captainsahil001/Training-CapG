@@ -1,0 +1,24 @@
+Syllabus -->
+-------------
+1.Core Java (for problems)
+2.J2EE (for development)
+	i.   JDBC
+	ii.  JSP
+	iii. Servlet
+3.Hibernate/JPA
+4.Spring Core
+5.Spring MVC
+6.Spring Boot
+7.SQL
+8.Devops
+9.CI/CD pipeline
+-----------------------------
+
+
+*Shortcuts -> 
+              1. Ctrl + Space               (to complete the code snippet).
+              2. Ctrl + Alt + Up/Down arrow (to create a duplicate snippet above or below).
+	      3. Shift + F2                 (to know more about the built in methods).
+              4. Ctrl + Shift + F           (to give proper indentation to the snippet).
+              5. Ctrl + Shift + O           (to input the missing import statement).
+              6. Ctrl + 1                   (to quick fix my code).

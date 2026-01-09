@@ -1,0 +1,34 @@
+package Java_Core;
+
+public class Demo {
+	public static void main(String[] args) {
+		int a = 10;
+		long b = a; // widening
+		System.out.println(b);
+
+		long c = 20;
+		int d = (int) c; // narrowing
+		System.out.println(d);
+
+		double dl = 55.55;
+		int il = (int) dl; // narrowing
+		System.out.println(il);
+		
+		byte e = 10;
+		float f = e;
+		System.out.println(f);
+		
+		float g = 5.2f;
+		int h = (int) g;
+		System.out.println(h);
+		
+		char i = 's';
+		int j = i;
+		System.out.println(j);
+		
+		int k = 10;
+		char l = (char) k;
+		System.out.println(l);
+	}
+
+}
