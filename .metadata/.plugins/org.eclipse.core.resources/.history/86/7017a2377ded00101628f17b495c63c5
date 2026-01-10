@@ -1,0 +1,12 @@
+package operator;
+
+public class ValidMonth {
+	public static void main(String[] args) {
+
+		int month = 5; // predefined month number
+
+		String result = (month >= 1 && month <= 12) ? "Valid Month" : "Invalid Month";
+
+		System.out.println(result);
+	}
+}

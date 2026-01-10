@@ -1,0 +1,10 @@
+package operator;
+
+public class Cond3 {
+	public static void main(String[] args) {
+		int a = 50, b = 100, c = 15;
+		int big = (a>b)?a:b;
+		big = (big>c)?big:c;
+		System.out.println("Biggest Number is " + big);
+	}
+}

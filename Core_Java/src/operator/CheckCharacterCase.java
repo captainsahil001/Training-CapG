@@ -1,0 +1,16 @@
+package operator;
+
+public class CheckCharacterCase {
+    public static void main(String[] args) {
+
+        char ch = 'A';   
+
+        if (ch >= 'A' && ch <= 'Z') {
+            System.out.println("Uppercase character");
+        } else if (ch >= 'a' && ch <= 'z') {
+            System.out.println("Lowercase character");
+        } else {
+            System.out.println("Not an alphabet");
+        }
+    }
+}

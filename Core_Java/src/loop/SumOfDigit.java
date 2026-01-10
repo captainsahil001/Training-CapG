@@ -1,0 +1,15 @@
+package loop;
+
+public class SumOfDigit {
+	public static void main(String[] args) {
+		int a = 123;
+		int sum = 0;
+		while(a!=0) {
+			int res = a%10;
+			a=a/10;
+			sum = sum + res;
+		}
+		System.out.println(sum);
+	}
+
+}

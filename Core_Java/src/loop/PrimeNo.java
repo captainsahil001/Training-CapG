@@ -1,0 +1,24 @@
+package loop;
+
+public class PrimeNo {
+	public static void main(String[] args) {
+		int n = 17;
+		if( n == 1) {
+			System.out.println("Not Prime");
+		}
+		int count = 0;
+		for(int i=2;i*i<=n;) {
+			if(n%i==0) {
+				count++;
+			}
+			if(count>0) {
+				System.out.println("Not Prime");
+			}
+			break;
+		}
+		if(count == 0) {
+			System.out.println("Prime");
+		}
+	}
+
+}
