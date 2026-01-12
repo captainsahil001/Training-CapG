@@ -1,0 +1,13 @@
+package method;
+
+public class GreatestOf3 {
+	public static void great3(int a, int b, int c) {
+		int res = (a>b && a>c)?a:(b>c)?b:c;
+		System.out.println(res);
+		
+	}
+	public static void main(String[] args) {
+		great3(3,7,4);
+	}
+
+}

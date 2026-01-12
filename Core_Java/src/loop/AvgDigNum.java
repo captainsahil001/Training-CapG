@@ -3,7 +3,7 @@ package loop;
 public class AvgDigNum {
 	public static void main(String[] args) {
 
-		int number = 12345; 
+		int number = 12464; 
 		int sum = 0;
 		int count = 0;
 
@@ -14,7 +14,7 @@ public class AvgDigNum {
 			number = number / 10;
 		}
 
-		double average = (double) sum / count;
+		double average =  (double) sum / count;
 
 		System.out.println("Average of digits = " + average);
 	}

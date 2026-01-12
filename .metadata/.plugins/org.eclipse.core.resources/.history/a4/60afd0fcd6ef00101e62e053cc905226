@@ -1,0 +1,27 @@
+package maths;
+
+public class DecimalToHexadecimal {
+
+	    public static void main(String[] args) {
+
+	        int decimal = 254;   // predefined decimal number
+	        String hex = "";
+
+	        while (decimal != 0) {
+	            int remainder = decimal % 16;
+
+	            if (remainder < 10) {
+	                hex = remainder + hex;
+	            } else {
+	                hex = (char) (remainder - 10 + 'A') + hex;
+	            }
+
+	            decimal = decimal / 16;
+	        }
+
+	        System.out.println("Hexadecimal value = " + hex);
+	    }
+	
+
+
+}

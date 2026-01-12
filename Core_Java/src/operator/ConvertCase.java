@@ -3,7 +3,7 @@ package operator;
 public class ConvertCase {
     public static void main(String[] args) {
 
-        char ch = 'A';  
+        char ch = 'a';  
 
         if (ch >= 'A' && ch <= 'Z') {
             ch = (char) (ch + 32);   
