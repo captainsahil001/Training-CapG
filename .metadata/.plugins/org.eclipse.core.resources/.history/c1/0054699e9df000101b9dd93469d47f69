@@ -1,0 +1,87 @@
+package oops;
+
+public class Obj5 {
+	
+	    public static void main(String[] args) {
+
+	        Student s = new Student();
+	        s.name = "Rahul";
+	        s.rollNo = 101;
+	        s.marks = 85;
+	        s.study();
+
+	        Car c = new Car();
+	        c.brand = "Toyota";
+	        c.speed = 60;
+	        c.drive();
+
+	        Mobile m = new Mobile();
+	        m.model = "Samsung";
+	        m.battery = 80;
+	        m.call();
+
+	        BankAccount b = new BankAccount();
+	        b.accountNumber = 12345;
+	        b.balance = 5000;
+	        b.deposit();
+
+	        Fan f = new Fan();
+	        f.brand = "Usha";
+	        f.isOn = true;
+	        f.rotate();
+	    }
+	}
+
+	
+	class Student {
+	    String name;
+	    long rollNo;
+	    int marks;
+
+	    void study() {
+	        System.out.println("Student is studying");
+	    }
+	}
+
+	
+	class Car {
+	    String brand;
+	    int speed;
+
+	    void drive() {
+	        System.out.println("Car is driving");
+	    }
+	}
+
+	
+	class Mobile {
+	    String model;
+	    int battery;
+
+	    void call() {
+	        System.out.println("Mobile is calling");
+	    }
+	}
+
+	
+	class BankAccount {
+	    int accountNumber;
+	    double balance;
+
+	    void deposit() {
+	        System.out.println("Money deposited");
+	    }
+	}
+
+	
+	class Fan {
+	    String brand;
+	    boolean isOn;
+
+	    void rotate() {
+	        System.out.println("Fan is rotating");
+	    }
+	
+
+
+}

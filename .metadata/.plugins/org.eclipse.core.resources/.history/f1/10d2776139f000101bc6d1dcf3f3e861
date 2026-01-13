@@ -1,0 +1,15 @@
+package ScanInput;
+
+public class GreatDouble {
+	public static void main(String[] args) {
+		great(1,2,3,4);
+	}
+
+	public static void great(double... d) {
+		double s = 0;
+		for (double i : d) {
+			System.out.println(Math.max(i, s));
+		}
+
+	}
+}

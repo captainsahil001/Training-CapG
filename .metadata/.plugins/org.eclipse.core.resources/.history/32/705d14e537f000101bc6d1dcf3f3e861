@@ -1,0 +1,17 @@
+package ScanInput;
+
+public class VarArg {
+	public static void main(String[] args) {
+		add("xyz",);
+		add("xyz",5,10,15,20);
+		
+	}
+	public static void add(String s,int... n) {
+		int sum = 0;
+		for(int i:n) {
+			sum = sum +i;
+		}
+		System.out.println(sum);
+	}
+
+}

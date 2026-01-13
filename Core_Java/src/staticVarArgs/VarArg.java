@@ -1,0 +1,17 @@
+package staticVarArgs;
+
+public class VarArg {
+	public static void main(String[] args) {
+		add("xyz ");
+		add("xyz ","abc ","345 ");
+		
+	}
+	public static void add(String... s) {
+		String sum = "";
+		for(String i:s) {
+			sum = sum +i;
+		}
+		System.out.println(sum);
+	}
+
+}

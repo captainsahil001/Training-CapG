@@ -1,0 +1,27 @@
+package oops;
+
+public class Employee {
+	int id;
+	String name;
+	double salary;
+	
+	public void work() {
+		System.out.println(name + " is working.");
+	}
+	public static void main(String[] args) {
+		Employee e1 = new Employee();
+		Employee e2 = new Employee();
+		Employee e3 = new Employee();
+		e1.id = 101;
+		e1.name = "Raju";
+		e1.salary = 5.20;
+		e2.id = 102;
+		e2.name = "Kaju";
+		e2.salary = 6.00;
+		e2.work();
+		e3.id = 103;
+		e3.name = "Baju";
+		e3.salary = 3.50;
+	}
+
+}

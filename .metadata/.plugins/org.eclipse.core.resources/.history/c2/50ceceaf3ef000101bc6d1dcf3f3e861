@@ -1,0 +1,9 @@
+package staticVarArgs;
+
+public class Student {
+	static String name = "Sahil Ghosh";
+	public static void main(String[] args) {
+		System.out.println(Student.name);
+	}
+
+}

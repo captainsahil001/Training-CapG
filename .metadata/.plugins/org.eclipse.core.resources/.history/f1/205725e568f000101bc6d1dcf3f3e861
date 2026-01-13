@@ -1,0 +1,35 @@
+package oops;
+
+public class Chaining {
+		int id;
+		String name;
+		long price;
+		double rating;
+		public Chaining(int id, String name) {
+			this.id = id;
+			this.name = name;
+		}
+		public Chaining(int id, String name,long price) {
+			this(id,name);
+			this.price = price;
+		}
+		public Chaining(int id, String name,long price,double rating) {
+			this(id,name,price);
+			this.rating = rating;
+		}
+		public void display() {
+			System.out.println(id);
+			System.out.println(name);
+			System.out.println(price);
+			System.out.println(rating);
+		}
+		public static void main(String[] args) {
+			Product p = new Product(1,"pen",10,4.0);
+			p.display();
+			Product p1 = new Product(2,"pencil");
+			p1.display();
+		}
+
+	}
+
+}
