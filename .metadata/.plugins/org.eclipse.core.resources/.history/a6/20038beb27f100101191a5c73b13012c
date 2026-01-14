@@ -1,0 +1,40 @@
+package oops.encapsulation.copy;
+
+public class Account {
+	private int id;
+	private double balance;
+	private long pass;
+	
+	public int getId() {
+		return id;
+	}
+	public double getBalance(long pass) {
+		if(this.pass == pass) {
+			return balance;
+		}
+		else {
+			System.out.println("Invalid Password");
+			return 0.0d;
+		}
+
+	}
+	public long getPass() {
+		return pass;
+	}
+	public void setID(int id) {
+		this.id = id;
+	}
+	public void setBalance(double balance) {
+		if(this.balance<1) {
+			return ;
+		}
+		this.balance = balance;
+		
+	}
+	public void setPass(long pass) {
+		this.pass = pass;
+	}
+	
+	
+
+}

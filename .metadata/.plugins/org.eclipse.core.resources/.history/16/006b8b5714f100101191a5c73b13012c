@@ -1,0 +1,13 @@
+package oops.encapsulation.copy;
+
+public class Student {
+	String name;
+	private int pass;
+	public int getPass() {
+		return pass;
+	}
+	public void setpass(int pass) {
+		this.pass=pass;
+	}
+
+}

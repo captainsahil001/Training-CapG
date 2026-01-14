@@ -1,0 +1,23 @@
+package oops;
+
+public class HelpLaptop {
+	public static Laptop getLaptop() {
+		return new Laptop();
+	}
+	public static Laptop getLaptopdata(String brand,double price) {
+		System.out.println("New Laptop created");
+		return new Laptop(brand,price);
+	}
+	public static Laptop getLaptopPr(String brand,double price){
+		if(price >=10000 && price <=500000) {
+			System.out.println("New Laptop created");
+			return new Laptop(brand,price);
+		}
+		System.out.println("No new Laptop created because at this price no Laptop exist.\nChange your price and make it in range (10000, 500000).");
+		return null;
+		
+	}
+	
+	
+
+}

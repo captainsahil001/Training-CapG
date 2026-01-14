@@ -1,0 +1,12 @@
+package oops.inheritance;
+
+public class Fruit {
+	String color;
+	String name;
+	Fruit(){}
+	Fruit(String color,String name){
+		this.color = color;
+		this.name=name;
+	}
+
+}

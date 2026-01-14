@@ -1,0 +1,12 @@
+package oops;
+
+public class HelpLaptop {
+	public static Laptop getLaptop() {
+		return new Laptop();
+	}
+	public static Laptop getLaptop(String brand,double price) {
+		return new Laptop(brand,price);
+	}
+	
+
+}

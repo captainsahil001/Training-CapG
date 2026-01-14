@@ -1,0 +1,7 @@
+package oops.inheritance;
+
+public class Fruit {
+	String color;
+	String name;
+
+}

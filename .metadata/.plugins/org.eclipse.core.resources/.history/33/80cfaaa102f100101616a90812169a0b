@@ -1,0 +1,8 @@
+package oops;
+
+public class HelpLaptop {
+	public static Laptop getLaptop() {
+		return new Laptop();
+	}
+
+}
