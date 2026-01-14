@@ -4,36 +4,37 @@ public class Laptop {
 
 	    String brand;
 	    double price;
+	     
+	    public Laptop(String brand, double price) {
+			this.brand = brand;
+			this.price = price;
+		}
 
-	    void display() {
+		void display() {
 	        System.out.println("Brand: " + brand + ", Price: " + price);
 	    }
+		
+		public void compareLaptop(Laptop l1) {
+			if(this.price>l1.price) {
+				System.out.println(this.brand + " is more costly");
+			}
+			else {
+				System.out.println(l1.brand + " is more costly");
+			}
+		}
 
-	    static void compare(Laptop l1, Laptop l2) {
-
-	        if (l1.price > l2.price) {
-	            System.out.println(l1.brand + " is more expensive");
-	        } else if (l1.price < l2.price) {
-	            System.out.println(l2.brand + " is more expensive");
-	        } else {
-	            System.out.println("Both laptops have the same price");
-	        }
-	    }
 
 	    public static void main(String[] args) {
 
-	        Laptop lap1 = new Laptop();
-	        lap1.brand = "Dell";
-	        lap1.price = 55000;
+	        Laptop lap1 = new Laptop("DELL",55000);
+	       
 
-	        Laptop lap2 = new Laptop();
-	        lap2.brand = "HP";
-	        lap2.price = 60000;
+	        Laptop lap2 = new Laptop("ASUS",60000);
+	        
 
-	        lap1.display();
-	        lap2.display();
+	        lap2.compareLaptop(lap1);
 
-	        compare(lap1, lap2);
+	        
 	    }
 	
 
