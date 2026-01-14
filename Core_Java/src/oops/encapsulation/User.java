@@ -1,0 +1,30 @@
+package oops.encapsulation;
+
+public class User {
+
+	private int age; 
+
+	
+	public void setAge(int a) {
+		if (a >= 18 && a <= 60) {
+			age = a;
+		} else {
+			System.out.println("Invalid age");
+		}
+	}
+
+
+	public int getAge() {
+		return age;
+	}
+
+	public static void main(String[] args) {
+		User u = new User();
+
+		u.setAge(25); 
+		System.out.println(u.getAge());
+
+		u.setAge(12); 
+	}
+
+}
