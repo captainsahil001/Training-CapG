@@ -30,6 +30,7 @@ public class Example {
 		System.out.println(s2);
 		
 	}
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		Example e = new Example();
 		e.m1();

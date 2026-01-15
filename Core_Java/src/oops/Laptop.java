@@ -29,7 +29,8 @@ public class Laptop {
 		}
 
 
-	    public static void main(String[] args) {
+	    @SuppressWarnings("unused")
+		public static void main(String[] args) {
 
 //	        Laptop lap1 = new Laptop("DELL",55000);
 //	       

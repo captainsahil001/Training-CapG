@@ -7,6 +7,7 @@ public class NsObj {
 	{
 		System.out.println("N-S 2");
 	}
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		System.out.println("main start");
 		NsObj e1 = new NsObj();

@@ -34,6 +34,7 @@ public class Employee {
 			System.out.println();
 			e.printEmployee();
 			System.out.println();
+			sc.close();
 		}
 //		Employee e1 = new Employee();
 //		Employee e2 = new Employee();

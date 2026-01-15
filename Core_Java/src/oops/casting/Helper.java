@@ -1,0 +1,21 @@
+package oops.casting;
+
+public class Helper {
+	public static void main(String[] args) {
+		Bike b = new Bike();
+		Vehicle v = new Vehicle();
+		System.out.println(b instanceof Bike);
+		System.out.println(v instanceof Bike);
+		Vehicle v2 = new Bike();
+		System.out.println(v2 instanceof Car);
+	}
+	public static void getVehicle(Vehicle v) {
+		if ( v instanceof Car) {
+			Car c =(Car)v;
+			c.noOfPass();
+		}else if(v instanceof Bike) {
+			Bike b = (Bike) v;
+			b.topspeed();
+		}
+	}
+}

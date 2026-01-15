@@ -1,0 +1,14 @@
+package oops.casting;
+
+public class Vehicle {
+	public void travel() {
+		System.out.println("We can travel with any vehicle");
+	}
+	public static void main(String[] args) {
+		Vehicle v1 = new Bike();
+		v1.travel();
+		Bike b1 = (Bike) v1;
+		b1.topspeed();
+	}
+
+}

@@ -1,0 +1,7 @@
+package oops.relation;
+
+public class Engine {
+	long cc;
+	String type;
+
+}

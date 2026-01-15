@@ -1,0 +1,12 @@
+package oops.supcall;
+
+public class Laptop extends Product{
+	double price;
+	String processor;
+	public Laptop(String brand, double price, String processor) {
+		super(brand);
+		this.price = price;
+		this.processor = processor;
+	}
+
+}
