@@ -1,0 +1,35 @@
+package oops.array;
+
+public class DigitSum {
+	public static int digitSum(int num) {
+		int sum = 0;
+
+		while (num > 0) {
+			sum += num % 10;
+			num = num / 10;
+		}
+		return sum;
+	}
+
+	
+	public static int[] digitSumArray(int[] arr) {
+		int[] result = new int[arr.length];
+
+		for (int i = 0; i < arr.length; i++) {
+			result[i] = digitSum(arr[i]);
+		}
+		return result;
+	}
+
+	public static void main(String[] args) {
+		int[] a = { 23, 45, 12, 89 };
+
+		int[] sumArray = digitSumArray(a);
+
+		// printing returned array
+		for (int i = 0; i < sumArray.length; i++) {
+			System.out.print(sumArray[i] + " ");
+		}
+	}
+
+}

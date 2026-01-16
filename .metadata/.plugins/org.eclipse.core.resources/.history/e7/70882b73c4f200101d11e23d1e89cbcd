@@ -1,0 +1,33 @@
+package oops.array;
+
+public class SumEvOd {
+	
+    
+    public static void sumEvenOddDigits(int num) {
+
+        int evenSum = 0;
+        int oddSum = 0;
+
+        while (num > 0) {
+            int digit = num % 10;
+
+            if (digit % 2 == 0) {
+                evenSum += digit;
+            } else {
+                oddSum += digit;
+            }
+
+            num = num / 10;
+        }
+
+        System.out.println("Even digit sum = " + evenSum);
+        System.out.println("Odd digit sum = " + oddSum);
+    }
+
+    public static void main(String[] args) {
+
+        int number = 12345;
+        sumEvenOddDigits(number);
+    }
+
+}
