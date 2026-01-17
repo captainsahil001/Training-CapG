@@ -1,0 +1,25 @@
+package oops.abstraction;
+
+public class Employee {
+	int id;
+	String name;
+	public Employee(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+	public Employee() {
+		
+	}
+	public static void main(String[] args) {
+		Raju r = new Raju(10, "Raju",10000.02);
+	}
+}
+
+class Raju extends Employee{
+	double sal;
+	public Raju(int id, String name,double sal) {
+		super(id,name);
+		this.sal=sal;
+	}
+	
+}

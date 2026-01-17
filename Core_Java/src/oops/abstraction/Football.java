@@ -1,0 +1,29 @@
+package oops.abstraction;
+
+public  class Football extends Game{
+	
+	@Override
+	public void start() {
+		System.out.println("Football started");
+	}
+	
+	@Override
+	public void end() {
+		System.out.println("Football ended");
+	}
+	
+	public static void main(String[] args) {
+		Football f = new Football();
+		f.start();
+		f.end();
+		f.play();
+		
+		Cricket c = new Cricket();
+		c.start();
+		c.end();
+		c.play();
+		
+	}
+	
+
+}

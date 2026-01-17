@@ -1,0 +1,10 @@
+package oops.abstraction;
+
+public class JuniorDeva extends Deva{
+	@Override
+	public void goldLoan() {
+		System.out.println("Jr Deva Paid gold loan");
+	}
+	
+
+}
