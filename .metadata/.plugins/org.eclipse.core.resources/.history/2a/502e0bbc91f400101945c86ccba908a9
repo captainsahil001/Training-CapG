@@ -1,0 +1,582 @@
+package oops.array.assignment;
+
+import java.util.*;
+
+public class ArrayMatrixMenu30 {
+
+    static final Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        while (true) {
+            printMenu();
+            int ch = readInt("Enter choice (1-30) or 0 to exit: ");
+
+            if (ch == 0) {
+                System.out.println("Bye!");
+                break;
+            }
+
+            try {
+                switch (ch) {
+                    case 1 -> q1_LargestSmallest2D();
+                    case 2 -> q2_AddMatrices();
+                    case 3 -> q3_MultiplyMatrices();
+                    case 4 -> q4_Transpose();
+                    case 5 -> q5_Identity();
+                    case 6 -> q6_Diagonals();
+                    case 7 -> q7_Boundary();
+                    case 8 -> q8_Spiral();
+                    case 9 -> q9_UpperTriangular();
+                    case 10 -> q10_LowerTriangular();
+                    case 11 -> q11_MatricesEqual();
+                    case 12 -> q12_Trace();
+                    case 13 -> q13_RemoveDuplicates();
+                    case 14 -> q14_UniqueElements();
+                    case 15 -> q15_PrimesInArray();
+                    case 16 -> q16_FibonacciElements();
+                    case 17 -> q17_InsertAtIndex();
+                    case 18 -> q18_RemoveAtIndex();
+                    case 19 -> q19_RightRotate();
+                    case 20 -> q20_LeftRotate();
+                    case 21 -> q21_SortArray();
+                    case 22 -> q22_NthLargest();
+                    case 23 -> q23_DuplicatePrimeElements();
+                    case 24 -> q24_LinearSearch();
+                    case 25 -> q25_BinarySearch();
+                    case 26 -> q26_BubbleSort();
+                    case 27 -> q27_FirstLastCharacter();
+                    case 28 -> q28_MergeTwoArrays();
+                    case 29 -> q29_ZigZagMerge();
+                    case 30 -> q30_PairsSumTarget();
+                    default -> System.out.println("Invalid choice!");
+                }
+            } catch (Exception e) {
+                System.out.println("Input error! Please try again.");
+                sc.nextLine(); // clear buffer
+            }
+
+            System.out.println("\n--- Press Enter to continue ---");
+            sc.nextLine();
+        }
+    }
+
+    // ================= MENU =================
+    static void printMenu() {
+        System.out.println("""
+        ===============================
+        30 Programs Menu (Java)
+        ===============================
+        1. Largest & Smallest in 2D array
+        2. Add two matrices
+        3. Multiply two matrices
+        4. Transpose of matrix
+        5. Check identity matrix
+        6. Print main & secondary diagonals
+        7. Print boundary elements
+        8. Print spiral order
+        9. Convert to upper triangular
+        10. Convert to lower triangular
+        11. Check two matrices equal
+        12. Trace of square matrix
+        13. Remove duplicates (preserve order)
+        14. Print unique elements (freq=1)
+        15. Print prime numbers in array
+        16. Print Fibonacci elements in array
+        17. Insert element at index
+        18. Remove element at index
+        19. Right rotate array by k
+        20. Left rotate array by k
+        21. Sort array (normal sort)
+        22. Nth largest element
+        23. Duplicate prime elements
+        24. Linear search
+        25. Binary search (sorted array)
+        26. Bubble sort
+        27. First & last character of string
+        28. Merge two arrays (append)
+        29. Merge two arrays in zig-zag
+        30. All pairs sum = target
+        0. Exit
+        ===============================
+        """);
+    }
+
+    static int readInt(String msg) {
+        System.out.print(msg);
+        while (!sc.hasNextInt()) {
+            System.out.print("Enter a valid integer: ");
+            sc.next();
+        }
+        int x = sc.nextInt();
+        sc.nextLine(); // consume newline
+        return x;
+    }
+
+    static int[][] readMatrix(int r, int c, String name) {
+        int[][] a = new int[r][c];
+        System.out.println("Enter elements of " + name + " (" + r + "x" + c + "):");
+        for (int i = 0; i < r; i++)
+            for (int j = 0; j < c; j++)
+                a[i][j] = readInt("");
+        return a;
+    }
+
+    static void printMatrix(int[][] a) {
+        for (int[] row : a) {
+            for (int x : row) System.out.print(x + " ");
+            System.out.println();
+        }
+    }
+
+    static int[] readArray() {
+        int n = readInt("Enter array size: ");
+        int[] a = new int[n];
+        System.out.println("Enter " + n + " elements:");
+        for (int i = 0; i < n; i++) a[i] = readInt("");
+        return a;
+    }
+
+    static void printArray(int[] a) {
+        for (int x : a) System.out.print(x + " ");
+        System.out.println();
+    }
+
+    // ================== Q1–Q12 (MATRIX) ==================
+    static void q1_LargestSmallest2D() {
+        int r = readInt("Rows: ");
+        int c = readInt("Cols: ");
+        int[][] a = readMatrix(r, c, "Matrix");
+
+        int mn = Integer.MAX_VALUE, mx = Integer.MIN_VALUE;
+        for (int[] row : a) for (int x : row) { mn = Math.min(mn, x); mx = Math.max(mx, x); }
+
+        System.out.println("Smallest = " + mn);
+        System.out.println("Largest  = " + mx);
+    }
+
+    static void q2_AddMatrices() {
+        int r = readInt("Rows: ");
+        int c = readInt("Cols: ");
+        int[][] A = readMatrix(r, c, "A");
+        int[][] B = readMatrix(r, c, "B");
+
+        int[][] S = new int[r][c];
+        for (int i = 0; i < r; i++)
+            for (int j = 0; j < c; j++)
+                S[i][j] = A[i][j] + B[i][j];
+
+        System.out.println("Sum matrix:");
+        printMatrix(S);
+    }
+
+    static void q3_MultiplyMatrices() {
+        int r1 = readInt("Matrix A rows: ");
+        int c1 = readInt("Matrix A cols: ");
+        int[][] A = readMatrix(r1, c1, "A");
+
+        int r2 = readInt("Matrix B rows: ");
+        int c2 = readInt("Matrix B cols: ");
+        int[][] B = readMatrix(r2, c2, "B");
+
+        if (c1 != r2) {
+            System.out.println("Multiplication not possible (A cols must equal B rows).");
+            return;
+        }
+
+        int[][] C = new int[r1][c2];
+        for (int i = 0; i < r1; i++) {
+            for (int j = 0; j < c2; j++) {
+                int sum = 0;
+                for (int k = 0; k < c1; k++) sum += A[i][k] * B[k][j];
+                C[i][j] = sum;
+            }
+        }
+
+        System.out.println("Product matrix:");
+        printMatrix(C);
+    }
+
+    static void q4_Transpose() {
+        int r = readInt("Rows: ");
+        int c = readInt("Cols: ");
+        int[][] A = readMatrix(r, c, "Matrix");
+
+        System.out.println("Transpose:");
+        for (int j = 0; j < c; j++) {
+            for (int i = 0; i < r; i++) System.out.print(A[i][j] + " ");
+            System.out.println();
+        }
+    }
+
+    static void q5_Identity() {
+        int n = readInt("Order n (n x n): ");
+        int[][] A = readMatrix(n, n, "Matrix");
+
+        boolean ok = true;
+        for (int i = 0; i < n && ok; i++)
+            for (int j = 0; j < n; j++) {
+                if (i == j && A[i][j] != 1) ok = false;
+                if (i != j && A[i][j] != 0) ok = false;
+            }
+
+        System.out.println(ok ? "Identity Matrix" : "Not an Identity Matrix");
+    }
+
+    static void q6_Diagonals() {
+        int n = readInt("Order n (n x n): ");
+        int[][] A = readMatrix(n, n, "Matrix");
+
+        System.out.print("Main diagonal: ");
+        for (int i = 0; i < n; i++) System.out.print(A[i][i] + " ");
+        System.out.println();
+
+        System.out.print("Secondary diagonal: ");
+        for (int i = 0; i < n; i++) System.out.print(A[i][n - 1 - i] + " ");
+        System.out.println();
+    }
+
+    static void q7_Boundary() {
+        int r = readInt("Rows: ");
+        int c = readInt("Cols: ");
+        int[][] A = readMatrix(r, c, "Matrix");
+
+        System.out.println("Boundary elements:");
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                if (i == 0 || i == r - 1 || j == 0 || j == c - 1) System.out.print(A[i][j] + " ");
+                else System.out.print("  ");
+            }
+            System.out.println();
+        }
+    }
+
+    static void q8_Spiral() {
+        int r = readInt("Rows: ");
+        int c = readInt("Cols: ");
+        int[][] A = readMatrix(r, c, "Matrix");
+
+        int top = 0, bottom = r - 1, left = 0, right = c - 1;
+        System.out.print("Spiral: ");
+        while (top <= bottom && left <= right) {
+            for (int j = left; j <= right; j++) System.out.print(A[top][j] + " ");
+            top++;
+            for (int i = top; i <= bottom; i++) System.out.print(A[i][right] + " ");
+            right--;
+            if (top <= bottom) {
+                for (int j = right; j >= left; j--) System.out.print(A[bottom][j] + " ");
+                bottom--;
+            }
+            if (left <= right) {
+                for (int i = bottom; i >= top; i--) System.out.print(A[i][left] + " ");
+                left++;
+            }
+        }
+        System.out.println();
+    }
+
+    static void q9_UpperTriangular() {
+        int n = readInt("Order n (n x n): ");
+        int[][] A = readMatrix(n, n, "Matrix");
+
+        System.out.println("Upper triangular:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (j < i) System.out.print("0 ");
+                else System.out.print(A[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    static void q10_LowerTriangular() {
+        int n = readInt("Order n (n x n): ");
+        int[][] A = readMatrix(n, n, "Matrix");
+
+        System.out.println("Lower triangular:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (j > i) System.out.print("0 ");
+                else System.out.print(A[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    static void q11_MatricesEqual() {
+        int r = readInt("Rows: ");
+        int c = readInt("Cols: ");
+        int[][] A = readMatrix(r, c, "A");
+        int[][] B = readMatrix(r, c, "B");
+
+        boolean same = true;
+        for (int i = 0; i < r && same; i++)
+            for (int j = 0; j < c; j++)
+                if (A[i][j] != B[i][j]) { same = false; break; }
+
+        System.out.println(same ? "Equal" : "Not Equal");
+    }
+
+    static void q12_Trace() {
+        int n = readInt("Order n (n x n): ");
+        int[][] A = readMatrix(n, n, "Matrix");
+        int trace = 0;
+        for (int i = 0; i < n; i++) trace += A[i][i];
+        System.out.println("Trace = " + trace);
+    }
+
+    // ================== Q13–Q30 (ARRAY/STRING) ==================
+    static void q13_RemoveDuplicates() {
+        int[] a = readArray();
+        LinkedHashSet<Integer> set = new LinkedHashSet<>();
+        for (int x : a) set.add(x);
+        System.out.println("After removing duplicates:");
+        for (int x : set) System.out.print(x + " ");
+        System.out.println();
+    }
+
+    static void q14_UniqueElements() {
+        int[] a = readArray();
+        HashMap<Integer, Integer> freq = new HashMap<>();
+        for (int x : a) freq.put(x, freq.getOrDefault(x, 0) + 1);
+
+        System.out.println("Unique elements (appear once):");
+        boolean any = false;
+        for (int x : a) {
+            if (freq.get(x) == 1) { System.out.print(x + " "); any = true; }
+        }
+        if (!any) System.out.print("None");
+        System.out.println();
+    }
+
+    static boolean isPrime(int x) {
+        if (x < 2) return false;
+        if (x == 2) return true;
+        if (x % 2 == 0) return false;
+        for (int i = 3; i * i <= x; i += 2) if (x % i == 0) return false;
+        return true;
+    }
+
+    static void q15_PrimesInArray() {
+        int[] a = readArray();
+        System.out.println("Prime elements:");
+        boolean any = false;
+        for (int x : a) if (isPrime(x)) { System.out.print(x + " "); any = true; }
+        if (!any) System.out.print("None");
+        System.out.println();
+    }
+
+    static boolean isPerfectSquare(long v) {
+        long s = (long) Math.sqrt(v);
+        return s * s == v;
+    }
+
+    static boolean isFibo(int x) {
+        if (x < 0) return false;
+        long n = x;
+        return isPerfectSquare(5 * n * n + 4) || isPerfectSquare(5 * n * n - 4);
+    }
+
+    static void q16_FibonacciElements() {
+        int[] a = readArray();
+        System.out.println("Fibonacci elements:");
+        boolean any = false;
+        for (int x : a) if (isFibo(x)) { System.out.print(x + " "); any = true; }
+        if (!any) System.out.print("None");
+        System.out.println();
+    }
+
+    static void q17_InsertAtIndex() {
+        int[] a = readArray();
+        int idx = readInt("Index to insert (0.." + a.length + "): ");
+        int val = readInt("Value: ");
+        if (idx < 0 || idx > a.length) { System.out.println("Invalid index"); return; }
+
+        int[] b = new int[a.length + 1];
+        for (int i = 0, j = 0; i < b.length; i++) {
+            if (i == idx) b[i] = val;
+            else b[i] = a[j++];
+        }
+        System.out.println("After insertion:");
+        printArray(b);
+    }
+
+    static void q18_RemoveAtIndex() {
+        int[] a = readArray();
+        int idx = readInt("Index to remove (0.." + (a.length - 1) + "): ");
+        if (idx < 0 || idx >= a.length) { System.out.println("Invalid index"); return; }
+
+        int[] b = new int[a.length - 1];
+        for (int i = 0, j = 0; i < a.length; i++) {
+            if (i == idx) continue;
+            b[j++] = a[i];
+        }
+        System.out.println("After removal:");
+        printArray(b);
+    }
+
+    static void reverse(int[] a, int l, int r) {
+        while (l < r) {
+            int t = a[l]; a[l] = a[r]; a[r] = t;
+            l++; r--;
+        }
+    }
+
+    static void q19_RightRotate() {
+        int[] a = readArray();
+        int k = readInt("Rotate right by k: ");
+        if (a.length == 0) return;
+        k %= a.length;
+
+        reverse(a, 0, a.length - 1);
+        reverse(a, 0, k - 1);
+        reverse(a, k, a.length - 1);
+
+        System.out.println("After right rotation:");
+        printArray(a);
+    }
+
+    static void q20_LeftRotate() {
+        int[] a = readArray();
+        int k = readInt("Rotate left by k: ");
+        if (a.length == 0) return;
+        k %= a.length;
+
+        reverse(a, 0, k - 1);
+        reverse(a, k, a.length - 1);
+        reverse(a, 0, a.length - 1);
+
+        System.out.println("After left rotation:");
+        printArray(a);
+    }
+
+    static void q21_SortArray() {
+        int[] a = readArray();
+        Arrays.sort(a);
+        System.out.println("Sorted array:");
+        printArray(a);
+    }
+
+    static void q22_NthLargest() {
+        int[] a = readArray();
+        int n = readInt("Enter n (1 means largest): ");
+        if (n < 1 || n > a.length) { System.out.println("Invalid n"); return; }
+
+        Integer[] b = new Integer[a.length];
+        for (int i = 0; i < a.length; i++) b[i] = a[i];
+        Arrays.sort(b, Collections.reverseOrder());
+        System.out.println(n + "th largest = " + b[n - 1]);
+    }
+
+    static void q23_DuplicatePrimeElements() {
+        int[] a = readArray();
+        HashMap<Integer, Integer> freq = new HashMap<>();
+        for (int x : a) if (isPrime(x)) freq.put(x, freq.getOrDefault(x, 0) + 1);
+
+        System.out.println("Duplicate prime elements:");
+        boolean any = false;
+        for (Map.Entry<Integer, Integer> e : freq.entrySet()) {
+            if (e.getValue() > 1) { System.out.print(e.getKey() + " "); any = true; }
+        }
+        if (!any) System.out.print("None");
+        System.out.println();
+    }
+
+    static void q24_LinearSearch() {
+        int[] a = readArray();
+        int key = readInt("Enter key to search: ");
+        int idx = -1;
+        for (int i = 0; i < a.length; i++) if (a[i] == key) { idx = i; break; }
+        System.out.println("Index = " + idx);
+    }
+
+    static void q25_BinarySearch() {
+        int[] a = readArray();
+        System.out.println("NOTE: Binary search needs sorted array.");
+        Arrays.sort(a);
+        System.out.print("Sorted: "); printArray(a);
+
+        int key = readInt("Enter key to search: ");
+        int l = 0, r = a.length - 1, ans = -1;
+        while (l <= r) {
+            int mid = l + (r - l) / 2;
+            if (a[mid] == key) { ans = mid; break; }
+            else if (a[mid] < key) l = mid + 1;
+            else r = mid - 1;
+        }
+        System.out.println("Index = " + ans);
+    }
+
+    static void q26_BubbleSort() {
+        int[] a = readArray();
+        for (int i = 0; i < a.length - 1; i++) {
+            boolean swapped = false;
+            for (int j = 0; j < a.length - 1 - i; j++) {
+                if (a[j] > a[j + 1]) {
+                    int t = a[j]; a[j] = a[j + 1]; a[j + 1] = t;
+                    swapped = true;
+                }
+            }
+            if (!swapped) break;
+        }
+        System.out.println("After bubble sort:");
+        printArray(a);
+    }
+
+    static void q27_FirstLastCharacter() {
+        System.out.print("Enter string: ");
+        String s = sc.nextLine();
+        if (s.length() == 0) { System.out.println("Empty string"); return; }
+        System.out.println("First: " + s.charAt(0));
+        System.out.println("Last : " + s.charAt(s.length() - 1));
+    }
+
+    static void q28_MergeTwoArrays() {
+        System.out.println("Array 1:");
+        int[] a = readArray();
+        System.out.println("Array 2:");
+        int[] b = readArray();
+
+        int[] m = new int[a.length + b.length];
+        for (int i = 0; i < a.length; i++) m[i] = a[i];
+        for (int i = 0; i < b.length; i++) m[a.length + i] = b[i];
+
+        System.out.println("Merged array:");
+        printArray(m);
+    }
+
+    static void q29_ZigZagMerge() {
+        System.out.println("Array 1:");
+        int[] a = readArray();
+        System.out.println("Array 2:");
+        int[] b = readArray();
+
+        System.out.println("Zig-Zag merge:");
+        int i = 0, j = 0;
+        while (i < a.length || j < b.length) {
+            if (i < a.length) System.out.print(a[i++] + " ");
+            if (j < b.length) System.out.print(b[j++] + " ");
+        }
+        System.out.println();
+    }
+
+    static void q30_PairsSumTarget() {
+        int[] a = readArray();
+        int target = readInt("Target sum: ");
+
+        HashMap<Integer, Integer> freq = new HashMap<>();
+        boolean found = false;
+
+        System.out.println("Pairs (x y) where x+y=" + target + ":");
+        for (int x : a) {
+            int need = target - x;
+            int count = freq.getOrDefault(need, 0);
+            for (int k = 0; k < count; k++) {
+                System.out.println(need + " " + x);
+                found = true;
+            }
+            freq.put(x, freq.getOrDefault(x, 0) + 1);
+        }
+        if (!found) System.out.println("No pairs found");
+    }
+}
+
