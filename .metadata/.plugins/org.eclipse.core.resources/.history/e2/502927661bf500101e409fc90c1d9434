@@ -1,0 +1,12 @@
+package oops.array.arrayId;
+
+public class StudentDriver {
+	public static void main(String[] args) {
+		Student[] students = new Student[3];
+		students[0] = new Student(10,"Virat");
+		students[1] = new Student(11,"Rohit");
+		students[2] = new Student(12,"Bumrah");
+		
+		System.out.println(students[0].name[0]);
+	}
+}

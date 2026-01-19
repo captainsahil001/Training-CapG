@@ -1,0 +1,8 @@
+package oops.array.arrayId;
+
+public class StudentDriver {
+	public static void main(String[] args) {
+		Student[] students = new Student[3];
+		students[0] = new Student(10,"Virat");
+	}
+}

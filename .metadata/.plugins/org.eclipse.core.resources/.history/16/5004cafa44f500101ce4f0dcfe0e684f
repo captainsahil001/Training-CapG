@@ -1,0 +1,16 @@
+package oops.array.arrayId;
+
+public class EmployeeServiceImp {
+	@Override
+	public  Employee[] getHighSalaryEmployee(Employee[] employees, double minSalary) {
+		
+	}
+	@Override
+	public  double calculateAverageSalary(Employee[] employees) {
+		
+	}
+	@Override
+	public  Employee getTopPaidEmployee(Employee[] employees) {
+		
+	}
+}

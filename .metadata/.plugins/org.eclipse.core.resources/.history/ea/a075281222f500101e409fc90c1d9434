@@ -1,0 +1,6 @@
+package oops.array.arrayId;
+
+public interface EmployeeService {
+	
+
+}

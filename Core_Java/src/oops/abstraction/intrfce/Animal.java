@@ -1,0 +1,9 @@
+package oops.abstraction.intrfce;
+
+public interface Animal {
+	void sound();
+	void color();
+
+}
+
+

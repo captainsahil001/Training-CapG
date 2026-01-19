@@ -1,0 +1,7 @@
+package oops.abstraction.intrfce;
+
+public class HelpVehicle {
+	public static Vehjicle getVehicle() {
+		return new Bike();
+	}
+}

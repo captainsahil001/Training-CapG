@@ -1,0 +1,12 @@
+package oops.array.arrayId;
+
+public class Student {
+	int id;
+	String name;
+	public Student() {
+		this.id = id;
+		this.name = name;
+		
+	}
+
+}
