@@ -1,0 +1,26 @@
+package oops.am;
+
+public class Singleton {
+	private static Singleton st;
+	public static Singleton getObject() {
+		if(st == null) {
+			st = new Singleton();
+		}
+		return st;
+	}
+	void display() {
+		System.out.println("Object created");
+	}
+	public static void main(String[] args) {
+		Singleton s = Singleton.getObject();
+		s.display();
+		Singleton b = Singleton.getObject();
+		b.display();
+		Singleton c = Singleton.getObject();
+		c.display();
+		
+		System.out.println(s==b);
+		System.out.println(b==c);
+	}
+
+}

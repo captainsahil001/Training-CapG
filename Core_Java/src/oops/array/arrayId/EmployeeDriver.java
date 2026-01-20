@@ -4,45 +4,53 @@ public class EmployeeDriver {
 	public static void main(String[] args) {
 
 		Employee[] employees = {
-		        new Employee(1, "Amit", 45000, "IT", 2),
-		        new Employee(2, "Neha", 75000, "IT", 5),
-		        new Employee(3, "Ravi", 60000, "HR", 4),
-		        new Employee(4, "Priya", 90000, "IT", 7),
-		        new Employee(5, "John", 50000, "HR", 1)
+		        new Employee(1, "Sahil", 45000, "IT", 2),
+		        new Employee(2, "Animesh", 75000, "IT", 5),
+		        new Employee(3, "Arnab", 60000, "HR", 4),
+		        new Employee(4, "Sombit", 90000, "IT", 7),
+		        new Employee(5, "Diptyanil", 50000, "HR", 1)
 		};
 
 		EmployeeService service = new EmployeeServiceImp();
 
 		System.out.println("Average Salary: " + service.calculateAverageSalary(employees));
+		System.out.println("--------------------");
 
-		System.out.println("\nTop Paid Employee:");
+		System.out.println("Top Paid Employee:");
 		Employee top = service.getTopPaidEmployee(employees);
 		if (top != null) {
 		    top.fetchDetails();
+		    
 		}
+		System.out.println("--------------------");
 
-		System.out.println("\nHigh Salary Employees (>= 60000):");
+		System.out.println("High Salary Employees (>= 60000):");
 		Employee[] high = service.getHighSalaryEmployees(employees, 60000);
 		for (Employee e : high) {
 		    e.fetchDetails();
-		    System.out.println("--------------------");
+		    
 		}
+		System.out.println("--------------------");
 
-		System.out.println("\nExperienced Employees (>= 4 years):");
+		System.out.println("Experienced Employees (>= 4 years):");
 		Employee[] exp = service.getExperiencedEmployees(employees, 4);
 		for (Employee e : exp) {
 		    e.fetchDetails();
-		    System.out.println("--------------------");
+		   
 		}
+		 System.out.println("--------------------");
 
-		System.out.println("\nTop Paid Employee in IT:");
+		System.out.println("Top Paid Employee in IT:");
 		Employee topIT = service.getTopPaidEmployeeByDepartment(employees, "IT");
 		if (topIT != null) {
 		    topIT.fetchDetails();
+		    
 		}
+		System.out.println("--------------------");
 
-		System.out.println("\nAverage Salary in HR:");
+		System.out.println("Average Salary in HR:");
 		System.out.println(service.getAverageSalaryByDepartment(employees, "HR"));
+		System.out.println("--------------------");
 
     }
 

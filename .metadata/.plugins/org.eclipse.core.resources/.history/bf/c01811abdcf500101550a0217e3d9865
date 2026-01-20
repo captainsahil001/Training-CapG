@@ -1,0 +1,34 @@
+package oops.am;
+
+public class SingletonObj5 {
+	private static int count = 0;
+	public static SingletonObj5 getObject() {
+		if(count<=5) {
+			count++;
+			return new SingletonObj5();
+
+		}
+		else {
+			return null;
+		}
+	}
+	
+	void display() {
+		System.out.println("Object created");
+	}
+	public static void main(String[] args) {
+		SingletonObj5 s = SingletonObj5.getObject();
+		SingletonObj5 a = SingletonObj5.getObject();
+		SingletonObj5 b = SingletonObj5.getObject();
+		SingletonObj5 c = SingletonObj5.getObject();
+		SingletonObj5 d = SingletonObj5.getObject();
+		SingletonObj5 e = SingletonObj5.getObject();
+		
+		s.display();
+		a.display();
+		b.display();
+		c.display();
+		e.display();
+//		f.display();
+	}
+}

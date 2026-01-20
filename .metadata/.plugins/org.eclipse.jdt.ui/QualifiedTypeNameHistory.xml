@@ -3,4 +3,5 @@
     <fullyQualifiedTypeName name="com.sun.tools.javac.launcher.Main"/>
     <fullyQualifiedTypeName name="staticVarArgs.Data"/>
     <fullyQualifiedTypeName name="jdk.internal.org.jline.terminal.TerminalBuilder.SystemOutput"/>
+    <fullyQualifiedTypeName name="java.util.Objects"/>
 </qualifiedTypeNameHistroy>

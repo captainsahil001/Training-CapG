@@ -1,0 +1,13 @@
+package oops.am;
+
+public class Demo {
+	{
+		System.out.println(this);
+	}
+	public static void main(String[] args) {
+		Demo d = new Demo();
+//		System.out.println(d);
+//		System.out.println(d.toString());
+	}
+
+}
