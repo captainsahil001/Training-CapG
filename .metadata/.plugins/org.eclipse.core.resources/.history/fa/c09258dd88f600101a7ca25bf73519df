@@ -1,0 +1,25 @@
+package oops.string;
+
+public class Demo {
+	public static void main(String[] args) {
+
+//		String st = new String("xyz");
+//		String sc = new String("xyz");
+//
+//		String a = "xyz";
+//		String b = "xyz";
+//
+//		System.out.println(st.equals(sc));// t
+//		System.out.println(a.equals(b));// t
+//
+//		System.out.println(st == sc);// f
+//		System.out.println(a == b);// t
+		
+		String a="ABC";
+		System.out.println(a);
+		a="ABC123";
+		System.out.println(a.hashCode());
+
+	}
+
+}

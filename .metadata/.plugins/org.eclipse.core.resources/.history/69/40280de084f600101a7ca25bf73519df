@@ -1,0 +1,13 @@
+package oops.string;
+
+public class Demo {
+	public static void main(String[] args) {
+		String a="xyz";
+		String b="xyz";
+		String c="abc";
+		
+		System.out.println(a.toString());
+		System.out.println(a.getClass());
+	}
+
+}

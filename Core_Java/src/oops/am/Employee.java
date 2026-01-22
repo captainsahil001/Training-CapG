@@ -40,7 +40,7 @@ public class Employee {
 	public static void main(String[] args) {
 		Employee e = new Employee(100,"Sahil",10000.0d,"IT");
 		Object a = new Employee(110,"rahul",10000d,"IT");
-		Employee e1 = null;
+		Employee e1 = new Employee(101,"Sg",1000000d,"IT");
 
 		Employee[] employee=new Employee[5];
 		
@@ -50,11 +50,11 @@ public class Employee {
 		employee[3]= (Employee)a;
 		employee[4]= e1;
 		
-//		for(int i =0;i<employee.length;i++) {
-//			System.out.println(employee[i]);
-//			System.out.println(employee[i].hashCode());
-//		}
-//		
+		for(int i =0;i<employee.length;i++) {
+			System.out.println(employee[i]);
+			
+		}
+		
 		System.out.println(employee[1].hashCode(employee[2]));
 		System.out.println(employee[1].equals(employee[4]));
 		

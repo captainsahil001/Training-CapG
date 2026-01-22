@@ -1,0 +1,36 @@
+package oops.exception;
+
+public class ExceptionHandling {
+	@SuppressWarnings("null")
+	public static void main(String[] args) {
+		System.out.println("hii");
+		try {
+			System.out.println(7/0);
+		}catch(ArithmeticException e) {
+			System.out.println("zero  exception occurs");
+		}
+		System.out.println("byee");
+		
+		
+		String s =null;
+		try {
+			System.out.println(s.charAt(1));
+		}catch(Exception e) {
+			System.out.println("null exception occurs");
+		}
+		System.out.println("executed");
+		
+		try {
+			System.out.println(7/1);
+			String a =null;
+			System.out.println(a.charAt(1));
+		}catch(ArithmeticException e) {
+			System.out.println("how many occured");
+		}catch(NullPointerException e1) {
+			System.out.println("String exception occured");
+		}
+	}
+	
+
+
+}

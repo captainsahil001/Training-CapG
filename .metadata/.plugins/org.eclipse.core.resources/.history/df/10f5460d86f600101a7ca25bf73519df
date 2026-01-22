@@ -1,0 +1,27 @@
+package oops.string;
+
+public class Demo {
+	public static void main(String[] args) {
+		String a="ABC";
+		String b="xyz";
+		String c="abc";
+		
+		String st = new String("ABC");
+		String sc = new String("ABC");
+		
+		System.out.println(a.toString());
+		System.out.println(a.getClass());
+		System.out.println(a.equals(b));
+		System.out.println(a.equals(c));
+		System.out.println(a == c);
+		System.out.println(a == b);
+		System.out.println(a.hashCode());
+		System.out.println(b.hashCode());
+		System.out.println(c.hashCode());
+		
+		System.out.println(st.equals(a));
+		System.out.println(st == a);
+		
+	}
+
+}

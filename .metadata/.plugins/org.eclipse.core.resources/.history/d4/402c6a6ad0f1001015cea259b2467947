@@ -1,8 +1,0 @@
-package oops.casting;
-
-public class Train {
-	public void ticketPrice() {
-		System.out.println("train ticket price is 5");
-	}
-
-}

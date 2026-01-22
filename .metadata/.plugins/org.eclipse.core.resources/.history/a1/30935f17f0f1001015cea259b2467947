@@ -1,9 +1,0 @@
-package oops.relation;
-
-public class Car {
-	int id;
-	String color;
-	String brand;
-	
-
-}

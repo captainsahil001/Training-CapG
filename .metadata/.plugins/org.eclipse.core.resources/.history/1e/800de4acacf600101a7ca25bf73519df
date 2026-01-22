@@ -1,0 +1,282 @@
+package oops.string;
+
+public class StringMethods {
+	public static void charAtMethod() {
+		String s = "ABC";
+		char c = s.charAt(0);
+		System.out.println(c);// A
+		System.out.println(s.charAt(1));// B
+		System.out.println(s.charAt(2));// C
+	}
+
+	public static void lengthMethod() {
+		String s = "ABC";
+		int l = s.length();
+		System.out.println(l);// 3
+		System.out.println(s.length());// 3
+	}
+
+	public static void countAlphabet(String s) {
+		int count = 0;
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			if (ch >= 'A' && ch <= 'Z' || ch >= 'a' && ch <= 'z') {
+				count++;
+			}
+		}
+		System.out.println(count);
+	}
+
+	public static String convertUpOrLow(String s) {
+		String ans = new String();
+		for (int i = 0; i < s.length(); i++) {
+			char c = s.charAt(i);
+			if ((c >= 'a' && c <= 'z')) {
+				c = (char) (c - 32);
+			} else if ((c >= 'A' && c <= 'Z')) {
+				c = (char) (c + 32);
+			}
+			ans += c;
+		}
+		return ans;
+	}
+
+	public static void trim() {
+		String a = "   XYZ   abc";
+		System.out.println(a);// XYZ abc
+		System.out.println(a.trim());// XYZ abc
+	}
+
+	public static void substring() {
+		String b = "abcde";
+		System.out.println(b.substring(0));// abcde
+		System.out.println(b.substring(1));// bcde
+		System.out.println(b.substring(2));// cde
+		System.out.println(b.substring(3));// de
+		System.out.println(b.substring(4));// e
+	}
+
+	public static void charArraytoString() {
+		// string to char
+		String b = "abcde";
+		char[] c = b.toCharArray();
+		for (int i = 0; i < c.length; i++) {
+			System.out.print(c[i]);
+		}
+		// char to string
+		String st = new String(c);
+		System.out.println(st);
+	}
+
+	public static void indexoflastindexof() {
+		String s = "abbcdbea";
+		System.out.println(s.indexOf('b'));
+		System.out.println(s.indexOf('a'));
+		System.out.println(s.indexOf('y'));
+		System.out.println(s.indexOf('1'));// doesnt exist so prints -1
+		System.out.println(s.indexOf('b', 3));// 3 here specifies it will start searching from 3 index as be have
+												// multiple times
+		System.out.println(s.lastIndexOf('b'));// from last it starts
+		System.out.println(s.lastIndexOf('a'));
+
+		String a = "hii java java hi";
+		System.out.println(a.indexOf("java"));
+		System.out.println(a.indexOf("java", 5));// starts after index 5
+	}
+
+	public static void removeDig(String s) {
+		String a = new String();
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			if (ch >= '0' && ch <= '9') {
+				continue;
+			}
+			a = a + ch;
+		}
+		System.out.println(a);
+	}
+
+	public static void countAll(String s) {
+		int alp = 0;
+		int dig = 0;
+		int sp = 0;
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			if (ch >= 'A' && ch <= 'Z' || ch >= 'a' && ch <= 'z') {
+				alp++;
+			} else if (ch >= '0' && ch <= '9') {
+				dig++;
+			} else {
+				sp++;
+			}
+		}
+		System.out.println(alp + " " + dig + " " + sp);
+
+	}
+
+	public static void firstUp(String s) {
+		String result = "";
+
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+
+			if (i == 0 || s.charAt(i - 1) == ' ') {
+				if (ch >= 'a' && ch <= 'z') {
+					ch = (char) (ch - 32);
+				}
+			}
+
+			result = result + ch;
+		}
+
+		System.out.println(result);
+	}
+
+	public static void contains() {
+		String s = "i love java";
+		System.out.println(s.contains("java"));// true
+		System.out.println(s.contains("i"));// true
+		System.out.println(s.contains("python"));// false
+	}
+
+	public static void split() {
+		String s = "hi, bye, java";
+		String[] st = s.split(",");
+		for (int i = 0; i < st.length; i++) {
+			System.out.print(st[i]);
+		}
+		System.out.println();
+	}
+
+	public static void eqignorecase() {
+		String s = "java";
+		String a = "JAVA";
+		System.out.println(s.equalsIgnoreCase(a));// true
+		System.out.println(s.equals(a));// false
+	}
+
+	public static void startswithandendswith() {
+		String s = "helloworld";
+		System.out.println(s.startsWith("hello"));// true
+		System.out.println(s.startsWith("he"));// true
+		System.out.println(s.startsWith("world"));// false
+
+		System.out.println(s.endsWith("world"));// true
+		System.out.println(s.endsWith("wor"));// false
+		System.out.println(s.endsWith("rld"));// true
+
+	}
+
+	public static void isemptyorblank() {
+		String s = " ";
+		System.out.println(s.isEmpty());// false
+		System.out.println(s.isBlank());// true
+	}
+
+	public static void replace() {
+		String s = "hello hi hi students";
+		System.out.println(s.replace("hi", "bye"));// hello bye bye students
+		System.out.println(s.replaceFirst("hi", "bye"));// hello bye hi students
+
+	}
+
+	public static void strip() {
+		String s = " hello hi hi students ";
+		// only strip() is similar to trim
+		System.out.println(s);
+		System.out.println(s.stripLeading());// remove the starting space
+		System.out.println(s.stripTrailing());// remove the ending space
+
+	}
+
+	public static void swap(String s) {
+
+		String result = "";
+
+	    for (int i = 0; i < s.length(); i++) {
+	        char ch = s.charAt(i);
+
+	       
+	        if (i == s.length() - 1 || s.charAt(i + 1) == ' ') {
+	            ch = Character.toLowerCase(ch);
+	        }
+
+	        result = result + ch;
+	    }
+
+	    System.out.println(result);
+
+	}
+	
+	public static void removeSpace(String s) {
+		System.out.println(s.replace(" ", ""));
+	}
+	
+
+	public static void main(String[] args) {
+		charAtMethod();
+		System.out.println("------------");
+
+		lengthMethod();
+		System.out.println("------------");
+
+		String st = "ABC";
+		countAlphabet(st);
+		System.out.println("------------");
+
+		String s = "abc123";
+		System.out.println(convertUpOrLow(s));
+		String a = "ABC123";
+		System.out.println(convertUpOrLow(a));
+		System.out.println("------------");
+
+		trim();
+		System.out.println("------------");
+
+		substring();
+		System.out.println("------------");
+
+		charArraytoString();
+		System.out.println("------------");
+
+		indexoflastindexof();
+		System.out.println("------------");
+
+		String x = "ab1cg3h5#$";
+		removeDig(x);
+		System.out.println("------------");
+
+		countAll(x);
+		System.out.println("------------");
+
+		String z = "hello i am sahil";
+		firstUp(z);
+		System.out.println("------------");
+
+		contains();
+		System.out.println("------------");
+
+		split();
+		System.out.println("------------");
+
+		eqignorecase();
+		System.out.println("------------");
+
+		startswithandendswith();
+		System.out.println("------------");
+
+		isemptyorblank();
+		System.out.println("------------");
+
+		replace();
+		System.out.println("------------");
+
+		strip();
+		System.out.println("------------");
+		
+		String f ="I LovE JavA";
+		swap(f);
+		removeSpace(f);
+	}
+
+}

@@ -1,0 +1,24 @@
+package oops.exception;
+
+public class IdException extends RuntimeException{
+	int id;
+	public IdException(String msg) {
+		super(msg);
+	}
+	public IdException() {
+		
+	}
+	public  void check(int id) {
+		id = this.id;
+		if(id>0 && id<100) {
+			System.out.println("Id is valid");
+		}else {
+			throw new IdException(id+"is invalid");
+		}
+	}
+	public static void main(String[] args) {
+		IdException id1 = new IdException();
+		id1.check(101);
+	}
+
+}

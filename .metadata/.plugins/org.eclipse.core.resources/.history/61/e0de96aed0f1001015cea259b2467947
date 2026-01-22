@@ -1,8 +1,0 @@
-package oops.casting;
-
-public class Vehicle {
-	public void travel() {
-		System.out.println("We can travel with any vehicle");
-	}
-
-}

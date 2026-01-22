@@ -1,0 +1,21 @@
+package oops.string;
+
+public class Demo {
+	public static void main(String[] args) {
+		String a="xyz";
+		String b="xyz";
+		String c="abc";
+		
+		System.out.println(a.toString());
+		System.out.println(a.getClass());
+		System.out.println(a.equals(b));
+		System.out.println(a.equals(c));
+		System.out.println(a == c);
+		System.out.println(a == b);
+		System.out.println(a.hashCode());
+		System.out.println(b.hashCode());
+		System.out.println(c.hashCode());
+		
+	}
+
+}

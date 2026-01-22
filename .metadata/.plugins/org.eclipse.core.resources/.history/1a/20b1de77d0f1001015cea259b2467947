@@ -1,8 +1,0 @@
-package oops.casting;
-
-public class Bike {
-	public void topspeed() {
-		System.out.println("Bike can reach 200m/s");
-	}
-
-}

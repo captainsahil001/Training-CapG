@@ -1,0 +1,31 @@
+package wrapper;
+
+public class demo {
+	public static void main(String[] args) {
+		int n=10;
+		Integer i=n;     //auto boxing
+		int n2 = i;      //auto unboxing
+		
+		Integer i2=80;   //auto boxing
+		
+		
+		Character c1='A';
+		System.out.println(n2);
+		System.out.println(n);
+		System.out.println(c1);
+		
+		Boolean a = Boolean.valueOf("true");
+		Boolean b = Boolean.valueOf("tr");
+		System.out.println(a);
+		System.out.println(b);
+		
+		int s = Integer.parseInt("123");
+		int t = Integer.valueOf("123");
+		System.out.println(s);
+		System.out.println(t + 1);
+		
+		int m = Integer.parseInt("123a");  //NumberFormatException a 123 contains alphabet a or character
+		System.out.println(m);
+		
+	}
+}

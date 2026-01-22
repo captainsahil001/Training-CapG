@@ -1,0 +1,17 @@
+package oops.exception;
+
+@SuppressWarnings("serial")
+public class AgeException extends RuntimeException{
+	
+	public AgeException(String message) {
+		super(message);
+	}
+	public static void main(String[] args) {
+		int age =-10;
+		if(age>0) {
+			System.out.println("Age is valid.");
+		}else {
+			throw new AgeException(age+"is invalid");
+		}
+	}
+}

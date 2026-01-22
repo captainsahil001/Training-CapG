@@ -1,0 +1,8 @@
+package oops.exception;
+
+public class AgeException extends RuntimeException{
+	public static void main(String[] args) {
+		
+	}
+
+}
