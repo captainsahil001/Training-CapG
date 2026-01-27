@@ -1,0 +1,37 @@
+package oops.collframe;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Currency;
+
+public class DateAndTime {
+	public static void main(String[] args) {
+		LocalDate date = LocalDate.now();
+		LocalTime time = LocalTime.now();
+		LocalDateTime dateTime = LocalDateTime.now();
+		
+		System.out.println(date);
+		System.out.println(time);
+		System.out.println(dateTime);
+		
+		DateTimeFormatter newformat = DateTimeFormatter.ofPattern("dd--MM--yyyy HH:mm:ss");
+		String formatted = dateTime.format(newformat);
+		System.out.println(formatted);
+		System.out.println("----------------------------");
+		
+		Currency currency = Currency.getInstance("USD");
+		System.out.println(currency.getCurrencyCode());
+		System.out.println(currency.getSymbol());
+		System.out.println(currency.getDisplayName());
+		
+		System.out.println("----------------------------");
+
+		
+		Currency currency2 = Currency.getInstance("INR");
+		System.out.println(currency2.getCurrencyCode());
+		System.out.println(currency2.getSymbol());
+		System.out.println(currency2.getDisplayName());
+	}
+}

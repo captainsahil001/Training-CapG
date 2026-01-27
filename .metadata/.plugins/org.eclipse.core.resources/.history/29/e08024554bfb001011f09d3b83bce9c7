@@ -1,0 +1,17 @@
+package oops.collframe;
+
+import java.util.HashMap;
+
+public interface Maps {
+	public static void main(String[] args) {
+		HashMap<String, Integer> h = new HashMap<>();
+		HashMap h1 = new HashMap();
+		h1.put("key", "Value");
+		h1.put(66, "Value 2");
+		h1.put('a', 100);
+		h1.put(67, "ade");
+		
+		System.out.println(h1);
+	}
+
+}

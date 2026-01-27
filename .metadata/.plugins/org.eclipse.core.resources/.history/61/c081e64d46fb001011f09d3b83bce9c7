@@ -1,0 +1,10 @@
+package oops.collframe;
+
+import java.util.LinkedList;
+
+public class Queues {
+	public static void main(String[] args) {
+		Queue<String> q = new LinkedList<>();
+	}
+
+}

@@ -1,0 +1,25 @@
+package oops.collframe;
+
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Queues {
+	public static void main(String[] args) {
+		Queue<Integer> q = new LinkedList<Integer>();
+		q.add(1);
+		q.add(2);
+		q.add(3);
+		q.add(4);
+		q.add(5);
+		System.out.println(q);
+		
+		Deque<Integer> dq = new LinkedList<Integer>();
+		dq.addFirst(1);
+		dq.addLast(2);
+		dq.addLast(5);
+		
+		System.out.println(dq);
+	}
+
+}

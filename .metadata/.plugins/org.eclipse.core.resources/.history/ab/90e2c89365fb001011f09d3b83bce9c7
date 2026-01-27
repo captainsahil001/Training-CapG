@@ -1,0 +1,42 @@
+package oops.collframe;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
+public class EmployeeDriver1 {
+	public static void main(String[] args) {
+//		Map<Integer, Employee1> map = new HashMap<>();
+//
+//        // Adding employees
+//        map.put(101, new Employee1(101, "Sahil", 50000));
+//        
+//        map.put(103, new Employee1(103, "Arnab", 55000));
+//        
+//        map.put(102, new Employee1(102, "Animesh", 60000));
+//
+//
+//        System.out.println("ID   Name   Salary");
+//        System.out.println("------------------");
+//
+//        for (Map.Entry<Integer, Employee1> entry : map.entrySet()) {
+//            entry.getValue().display();
+//        	}
+        
+        
+        
+        ArrayList<Employee1> list = new ArrayList<Employee1>();
+        list.add(new Employee1(101, "Sahil", 50000));
+        list.add(new Employee1(103, "Arnab", 55000));
+        list.add(new Employee1(102, "Animesh", 60000));
+        
+        
+        Collections.sort(list,(s1,s2)->s1.id-s2.id);
+        System.out.println(list);
+        System.out.println("------------------");
+        
+        Collections.sort(list,(s1,s2)-> s1.name.compareTo(s2.name));
+        System.out.println(list);
+	}
+}

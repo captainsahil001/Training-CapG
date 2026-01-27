@@ -1,0 +1,15 @@
+package collections.programs;
+
+import java.util.*;
+
+public class ConvertArray {
+	public static void main(String[] args) {
+        String[] arr = {"a", "b", "a", "c"};
+
+        List<String> list = Arrays.asList(arr);
+        Set<String> set = new HashSet<>(list);
+
+        System.out.println("List: " + list);
+        System.out.println("Set: " + set);
+    }
+}

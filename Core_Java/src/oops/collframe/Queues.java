@@ -1,0 +1,46 @@
+package oops.collframe;
+
+import java.util.Collections;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+public class Queues {
+	public static void main(String[] args) {
+		Queue<Integer> q = new LinkedList<Integer>();
+		q.add(1);
+		q.add(2);
+		q.add(3);
+		q.add(4);
+		q.add(5);
+		System.out.println(q);
+		System.out.println("----------------------");
+		
+		Deque<Integer> dq = new LinkedList<Integer>();
+		dq.addFirst(1);
+		dq.addLast(2);
+		dq.addLast(5);
+		
+		System.out.println(dq);
+		System.out.println("----------------------");
+
+		
+		PriorityQueue<Integer> pq = new PriorityQueue<>();
+		pq.offer(1);
+		pq.offer(5);
+		pq.offer(2);
+		System.out.println(pq);
+		System.out.println("----------------------");
+
+		
+		PriorityQueue<Integer> pq1 = new PriorityQueue<>(Collections.reverseOrder());
+		pq1.offer(1);
+		pq1.offer(5);
+		pq1.offer(2);
+		System.out.println(pq1);
+		System.out.println("----------------------");
+
+	}
+
+}

@@ -1,0 +1,30 @@
+package oops.collframe;
+
+import java.util.HashMap;
+
+public interface Maps {
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public static void main(String[] args) {
+		HashMap<Integer,String> h = new HashMap<Integer,String>();
+		h.put(1, "Sahil");
+		h.put(2, "Animesh");
+		h.put(3, "Arnab");
+		h.put(4, "Sombit");
+		
+		System.out.println(h);
+		System.out.println(h.get(2));
+		System.out.println(h.getOrDefault(20, "No"));
+		System.out.println("--------------------");
+		
+		HashMap h1 = new HashMap();
+		h1.put("key", "Value");
+		h1.put(66, "Value2");
+		h1.put('a', 100);
+		h1.put(67, "ade");
+		
+		System.out.println(h1);
+		System.out.println("--------------------");
+
+	}
+
+}

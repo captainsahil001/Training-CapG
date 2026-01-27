@@ -1,0 +1,27 @@
+package oops.collframe;
+
+public class Employee1 {
+		
+		int id;
+		String name;
+		double salary;
+		
+		public Employee1(int id, String name, double salary) {
+			this.id = id;
+			this.name = name;
+			this.salary = salary;
+		}
+		
+		public String toString() {
+			return "id: "+id+" name: "+name+" salary: "+salary;
+		}
+		
+		void display() {
+			 System.out.println("ID: " + id);
+		     System.out.println("Name: " + name);
+		     System.out.println("Salary: " + salary);
+		}
+
+	
+
+}
