@@ -1,9 +1,0 @@
-package oops.polymorphism.runtime;
-
-public class Parent2 {
-	public static void home() {
-		System.out.println("parent");
-	}
-	
-
-}

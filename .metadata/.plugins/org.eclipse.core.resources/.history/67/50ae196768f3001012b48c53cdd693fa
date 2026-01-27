@@ -1,9 +1,0 @@
-package oops.abstraction;
-
-public class Deva {
-	@Override
-	public void homeLoan() {
-		System.out.println("Deva paid home loan");
-	}
-
-}

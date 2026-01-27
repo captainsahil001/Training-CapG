@@ -1,8 +1,0 @@
-package oops.array;
-
-public class BiggestSmallest {
-	public static void bigg(int arr[]) {
-		return;
-	}
-
-}
