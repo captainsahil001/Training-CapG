@@ -1,8 +1,0 @@
-package oops.string;
-
-public class StringBuilderBuilder {
-	public static void main(String[] args) {
-		
-	}
-
-}
