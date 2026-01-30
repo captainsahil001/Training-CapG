@@ -8,6 +8,8 @@ public class SumOfNatural {
 		}
 		return sum;
 	}
+	
+
 	public static void main(String[] args) {
 		int a = 6;
 		System.out.println(sumOfNat(a));
