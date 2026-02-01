@@ -1,4 +1,4 @@
-package arrays;
+package arraysandstrings;
 
 public class RemoveDup {
 	public static int[] removeDuplicates(int[] arr) {

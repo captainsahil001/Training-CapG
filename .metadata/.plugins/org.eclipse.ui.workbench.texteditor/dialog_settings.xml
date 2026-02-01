@@ -4,7 +4,6 @@
 		<item key="replaceBarOpen" value="false"/>
 		<item key="selection" value=""/>
 		<list key="findhistory">
-			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">

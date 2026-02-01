@@ -1,4 +1,4 @@
-package arrays;
+package arraysandstrings;
 
 public class SmallestElement {
 	public static int findSmallest(int[] arr) {

@@ -1,4 +1,4 @@
-package arrays;
+package arraysandstrings;
 
 public class DeletingElement {
 	public static void main(String[] args) {
