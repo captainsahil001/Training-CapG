@@ -1,3 +1,2 @@
-2026/02/01-20:41:35.197 2744 Reusing MANIFEST C:\Users\sahil\Desktop\Training(CapG)\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
-2026/02/01-20:41:35.229 2744 Recovering log #3
-2026/02/01-20:41:35.237 2744 Reusing old log C:\Users\sahil\Desktop\Training(CapG)\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/000003.log 
+2026/02/03-10:58:13.962 bb8 Creating DB C:\Users\sahil\Desktop\Training(CapG)\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb since it was missing.
+2026/02/03-10:58:14.041 bb8 Reusing MANIFEST C:\Users\sahil\Desktop\Training(CapG)\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
