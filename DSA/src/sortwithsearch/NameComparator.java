@@ -1,4 +1,4 @@
-package sort;
+package sortwithsearch;
 
 import java.util.Comparator;
 
