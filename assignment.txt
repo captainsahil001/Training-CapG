@@ -1,0 +1,680 @@
+SQL> --1 WRITE A QUERY TO DISPLAY ALL THE DETAILS FROM THE EMPLOYEE TABLE.
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300      
+        30                                                                      
+                                                                                
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500      
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7566 JONES      MANAGER         7839 02-APR-81       2975                 
+        20                                                                      
+                                                                                
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400      
+        30                                                                      
+                                                                                
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                 
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                 
+        10                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                 
+        20                                                                      
+                                                                                
+      7839 KING       PRESIDENT            17-NOV-81       5000                 
+        10                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0      
+        30                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                 
+        20                                                                      
+                                                                                
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+14 rows selected.
+
+SQL> --2 WAQTD NAMES OF ALL THE EMPLOYEES.
+SQL> select ENAME as Name from emp;
+
+NAME                                                                            
+----------                                                                      
+SMITH                                                                           
+ALLEN                                                                           
+WARD                                                                            
+JONES                                                                           
+MARTIN                                                                          
+BLAKE                                                                           
+CLARK                                                                           
+SCOTT                                                                           
+KING                                                                            
+TURNER                                                                          
+ADAMS                                                                           
+
+NAME                                                                            
+----------                                                                      
+JAMES                                                                           
+FORD                                                                            
+MILLER                                                                          
+
+14 rows selected.
+
+SQL> --3 WAQTD NAME AND SALARY GIVEN TO ALL THE EMPLOYEES.
+SQL> select ENAME as Name AND SAL as Salary from emp;
+select ENAME as Name AND SAL as Salary from emp
+                     *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select ENAME as Name, SAL as Salary from emp;
+
+NAME           SALARY                                                           
+---------- ----------                                                           
+SMITH             800                                                           
+ALLEN            1600                                                           
+WARD             1250                                                           
+JONES            2975                                                           
+MARTIN           1250                                                           
+BLAKE            2850                                                           
+CLARK            2450                                                           
+SCOTT            3000                                                           
+KING             5000                                                           
+TURNER           1500                                                           
+ADAMS            1100                                                           
+
+NAME           SALARY                                                           
+---------- ----------                                                           
+JAMES             950                                                           
+FORD             3000                                                           
+MILLER           1300                                                           
+
+14 rows selected.
+
+SQL> --4 WAQTD NAME AND COMMISSION GIVEN TO ALL THE EMPLOYEES.
+SQL> select ENAME Name, COMM Comm from emp;
+
+NAME             COMM                                                           
+---------- ----------                                                           
+SMITH                                                                           
+ALLEN             300                                                           
+WARD              500                                                           
+JONES                                                                           
+MARTIN           1400                                                           
+BLAKE                                                                           
+CLARK                                                                           
+SCOTT                                                                           
+KING                                                                            
+TURNER              0                                                           
+ADAMS                                                                           
+
+NAME             COMM                                                           
+---------- ----------                                                           
+JAMES                                                                           
+FORD                                                                            
+MILLER                                                                          
+
+14 rows selected.
+
+SQL> --5 WAQTD EMPLOYEE ID AND DEPARTMENT NUMBER OF ALL THE EMPLOYEES IN THE EMP TABLE.
+SQL> select EMPNO EmpId, DEPTNO DeptNo WITH ENAME Name from emp;
+select EMPNO EmpId, DEPTNO DeptNo WITH ENAME Name from emp
+                                  *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select EMPNO EmpId, DEPTNO DeptNo, ENAME Name from emp;
+
+     EMPID     DEPTNO NAME                                                      
+---------- ---------- ----------                                                
+      7369         20 SMITH                                                     
+      7499         30 ALLEN                                                     
+      7521         30 WARD                                                      
+      7566         20 JONES                                                     
+      7654         30 MARTIN                                                    
+      7698         30 BLAKE                                                     
+      7782         10 CLARK                                                     
+      7788         20 SCOTT                                                     
+      7839         10 KING                                                      
+      7844         30 TURNER                                                    
+      7876         20 ADAMS                                                     
+
+     EMPID     DEPTNO NAME                                                      
+---------- ---------- ----------                                                
+      7900         30 JAMES                                                     
+      7902         20 FORD                                                      
+      7934         10 MILLER                                                    
+
+14 rows selected.
+
+SQL> --6 WAQTD ENAME AND HIREDATE OF ALL THE EMPLOYEES.
+SQL> select ENAME Name, HIREDATE HireDate from emp;
+
+NAME       HIREDATE                                                             
+---------- ---------                                                            
+SMITH      17-DEC-80                                                            
+ALLEN      20-FEB-81                                                            
+WARD       22-FEB-81                                                            
+JONES      02-APR-81                                                            
+MARTIN     28-SEP-81                                                            
+BLAKE      01-MAY-81                                                            
+CLARK      09-JUN-81                                                            
+SCOTT      19-APR-87                                                            
+KING       17-NOV-81                                                            
+TURNER     08-SEP-81                                                            
+ADAMS      23-MAY-87                                                            
+
+NAME       HIREDATE                                                             
+---------- ---------                                                            
+JAMES      03-DEC-81                                                            
+FORD       03-DEC-81                                                            
+MILLER     23-JAN-82                                                            
+
+14 rows selected.
+
+SQL> --7 WAQTD NAME AND DESIGNATION OF ALL THE EMPLOYEES.
+SQL> select ENAME Name, JOB Designation from emp;
+
+NAME       DESIGNATI                                                            
+---------- ---------                                                            
+SMITH      CLERK                                                                
+ALLEN      SALESMAN                                                             
+WARD       SALESMAN                                                             
+JONES      MANAGER                                                              
+MARTIN     SALESMAN                                                             
+BLAKE      MANAGER                                                              
+CLARK      MANAGER                                                              
+SCOTT      ANALYST                                                              
+KING       PRESIDENT                                                            
+TURNER     SALESMAN                                                             
+ADAMS      CLERK                                                                
+
+NAME       DESIGNATI                                                            
+---------- ---------                                                            
+JAMES      CLERK                                                                
+FORD       ANALYST                                                              
+MILLER     CLERK                                                                
+
+14 rows selected.
+
+SQL> --8 WAQTD NAME, JOB AND SALARY GIVEN TO ALL THE EMPLOYEES.
+SQL> select ENAME Name, JOB Job, SAL Salary from emp;
+
+NAME       JOB           SALARY                                                 
+---------- --------- ----------                                                 
+SMITH      CLERK            800                                                 
+ALLEN      SALESMAN        1600                                                 
+WARD       SALESMAN        1250                                                 
+JONES      MANAGER         2975                                                 
+MARTIN     SALESMAN        1250                                                 
+BLAKE      MANAGER         2850                                                 
+CLARK      MANAGER         2450                                                 
+SCOTT      ANALYST         3000                                                 
+KING       PRESIDENT       5000                                                 
+TURNER     SALESMAN        1500                                                 
+ADAMS      CLERK           1100                                                 
+
+NAME       JOB           SALARY                                                 
+---------- --------- ----------                                                 
+JAMES      CLERK            950                                                 
+FORD       ANALYST         3000                                                 
+MILLER     CLERK           1300                                                 
+
+14 rows selected.
+
+SQL> --9 WAQTD DNAMES PRESENT IN DEPARTMENT TABLE.
+SQL> select * from dept;
+
+    DEPTNO DNAME          LOC                                                   
+---------- -------------- -------------                                         
+        10 ACCOUNTING     NEW YORK                                              
+        20 RESEARCH       DALLAS                                                
+        30 SALES          CHICAGO                                               
+        40 OPERATIONS     BOSTON                                                
+
+SQL> select DNAME from dept;
+
+DNAME                                                                           
+--------------                                                                  
+ACCOUNTING                                                                      
+RESEARCH                                                                        
+SALES                                                                           
+OPERATIONS                                                                      
+
+SQL> --10 WAQTD DNAME AND LOCATION PRESENT IN DEPT TABLE.
+SQL> select DNAME, LOC from dept;
+
+DNAME          LOC                                                              
+-------------- -------------                                                    
+ACCOUNTING     NEW YORK                                                         
+RESEARCH       DALLAS                                                           
+SALES          CHICAGO                                                          
+OPERATIONS     BOSTON                                                           
+
+SQL> --EXPRESSION AND ALIAS
+SQL> --1 WAQTD NAME OF THE EMPLOYEE ALONG WITH THEIR ANNUAL SALARY.
+SQL> select ENAME Name, SAL*12 as Annual Salary from emp;
+select ENAME Name, SAL*12 as Annual Salary from emp
+                                    *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select ENAME Name, SAL*12 as AnnualSalary from emp;
+
+NAME       ANNUALSALARY                                                         
+---------- ------------                                                         
+SMITH              9600                                                         
+ALLEN             19200                                                         
+WARD              15000                                                         
+JONES             35700                                                         
+MARTIN            15000                                                         
+BLAKE             34200                                                         
+CLARK             29400                                                         
+SCOTT             36000                                                         
+KING              60000                                                         
+TURNER            18000                                                         
+ADAMS             13200                                                         
+
+NAME       ANNUALSALARY                                                         
+---------- ------------                                                         
+JAMES             11400                                                         
+FORD              36000                                                         
+MILLER            15600                                                         
+
+14 rows selected.
+
+SQL> --2 WAQTD ENAME AND JOB FOR ALL THE EMPLOYEE WITH THEIR HALF TERM SALARY.
+SQL> select ENAME Name, JOB, SAL*6 as HalfSal from emp;
+
+NAME       JOB          HALFSAL                                                 
+---------- --------- ----------                                                 
+SMITH      CLERK           4800                                                 
+ALLEN      SALESMAN        9600                                                 
+WARD       SALESMAN        7500                                                 
+JONES      MANAGER        17850                                                 
+MARTIN     SALESMAN        7500                                                 
+BLAKE      MANAGER        17100                                                 
+CLARK      MANAGER        14700                                                 
+SCOTT      ANALYST        18000                                                 
+KING       PRESIDENT      30000                                                 
+TURNER     SALESMAN        9000                                                 
+ADAMS      CLERK           6600                                                 
+
+NAME       JOB          HALFSAL                                                 
+---------- --------- ----------                                                 
+JAMES      CLERK           5700                                                 
+FORD       ANALYST        18000                                                 
+MILLER     CLERK           7800                                                 
+
+14 rows selected.
+
+SQL> --3 WAQTD ALL THE DETAILS OF THE EMPLOYEES ALONG WITH AN ANNUAL BONUS OF 2000.
+SQL> select * || (SAL*12)+2000 as AnnBonus from emp;
+select * || (SAL*12)+2000 as AnnBonus from emp
+         *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select emp.*,(SAL*12 + 2000) as AnnBonus from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO   ANNBONUS                                                           
+---------- ----------                                                           
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20      11600                                                           
+                                                                                
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300      
+        30      21200                                                           
+                                                                                
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500      
+        30      17000                                                           
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO   ANNBONUS                                                           
+---------- ----------                                                           
+      7566 JONES      MANAGER         7839 02-APR-81       2975                 
+        20      37700                                                           
+                                                                                
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400      
+        30      17000                                                           
+                                                                                
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                 
+        30      36200                                                           
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO   ANNBONUS                                                           
+---------- ----------                                                           
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                 
+        10      31400                                                           
+                                                                                
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                 
+        20      38000                                                           
+                                                                                
+      7839 KING       PRESIDENT            17-NOV-81       5000                 
+        10      62000                                                           
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO   ANNBONUS                                                           
+---------- ----------                                                           
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0      
+        30      20000                                                           
+                                                                                
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                 
+        20      15200                                                           
+                                                                                
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30      13400                                                           
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO   ANNBONUS                                                           
+---------- ----------                                                           
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20      38000                                                           
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10      17600                                                           
+                                                                                
+
+14 rows selected.
+
+SQL> --4 WAQTD NAME SALARY AND SALARY WITH A HIKE OF 10%.
+SQL> select ENAME Name, SAL Salary, SAL+(SAL*0.10) as HikeSal from emp;
+
+NAME           SALARY    HIKESAL                                                
+---------- ---------- ----------                                                
+SMITH             800        880                                                
+ALLEN            1600       1760                                                
+WARD             1250       1375                                                
+JONES            2975     3272.5                                                
+MARTIN           1250       1375                                                
+BLAKE            2850       3135                                                
+CLARK            2450       2695                                                
+SCOTT            3000       3300                                                
+KING             5000       5500                                                
+TURNER           1500       1650                                                
+ADAMS            1100       1210                                                
+
+NAME           SALARY    HIKESAL                                                
+---------- ---------- ----------                                                
+JAMES             950       1045                                                
+FORD             3000       3300                                                
+MILLER           1300       1430                                                
+
+14 rows selected.
+
+SQL> --5 WAQTD NAME AND SALARY WITH DEDUCTION OF 25%.
+SQL> SELECT ENAME, SAL, SAL * 0.75 AS Salary_After_Deduction
+  2  FROM emp;
+
+ENAME             SAL SALARY_AFTER_DEDUCTION                                    
+---------- ---------- ----------------------                                    
+SMITH             800                    600                                    
+ALLEN            1600                   1200                                    
+WARD             1250                  937.5                                    
+JONES            2975                2231.25                                    
+MARTIN           1250                  937.5                                    
+BLAKE            2850                 2137.5                                    
+CLARK            2450                 1837.5                                    
+SCOTT            3000                   2250                                    
+KING             5000                   3750                                    
+TURNER           1500                   1125                                    
+ADAMS            1100                    825                                    
+
+ENAME             SAL SALARY_AFTER_DEDUCTION                                    
+---------- ---------- ----------------------                                    
+JAMES             950                  712.5                                    
+FORD             3000                   2250                                    
+MILLER           1300                    975                                    
+
+14 rows selected.
+
+SQL> --6 WAQTD NAME AND SALARY WITH MONTHLY HIKE OF 50.
+SQL> SELECT ENAME, SAL, SAL + 50 AS Hiked_Salary
+  2  FROM emp;
+
+ENAME             SAL HIKED_SALARY                                              
+---------- ---------- ------------                                              
+SMITH             800          850                                              
+ALLEN            1600         1650                                              
+WARD             1250         1300                                              
+JONES            2975         3025                                              
+MARTIN           1250         1300                                              
+BLAKE            2850         2900                                              
+CLARK            2450         2500                                              
+SCOTT            3000         3050                                              
+KING             5000         5050                                              
+TURNER           1500         1550                                              
+ADAMS            1100         1150                                              
+
+ENAME             SAL HIKED_SALARY                                              
+---------- ---------- ------------                                              
+JAMES             950         1000                                              
+FORD             3000         3050                                              
+MILLER           1300         1350                                              
+
+14 rows selected.
+
+SQL> --7 WAQTD NAME AND ANNUAL SALARY WITH DEDUCTION OF 10%.
+SQL> SELECT ENAME, (SAL * 12) * 0.90 AS Annual_Salary_After_Deduction
+  2  FROM emp;
+
+ENAME      ANNUAL_SALARY_AFTER_DEDUCTION                                        
+---------- -----------------------------                                        
+SMITH                               8640                                        
+ALLEN                              17280                                        
+WARD                               13500                                        
+JONES                              32130                                        
+MARTIN                             13500                                        
+BLAKE                              30780                                        
+CLARK                              26460                                        
+SCOTT                              32400                                        
+KING                               54000                                        
+TURNER                             16200                                        
+ADAMS                              11880                                        
+
+ENAME      ANNUAL_SALARY_AFTER_DEDUCTION                                        
+---------- -----------------------------                                        
+JAMES                              10260                                        
+FORD                               32400                                        
+MILLER                             14040                                        
+
+14 rows selected.
+
+SQL> --8 WAQTD TOTAL SALARY GIVEN TO EACH EMPLOYEE (SAL+COMM).
+SQL> SELECT ENAME, SAL + NVL(COMM, 0) AS Total_Salary
+  2  FROM emp;
+
+ENAME      TOTAL_SALARY                                                         
+---------- ------------                                                         
+SMITH               800                                                         
+ALLEN              1900                                                         
+WARD               1750                                                         
+JONES              2975                                                         
+MARTIN             2650                                                         
+BLAKE              2850                                                         
+CLARK              2450                                                         
+SCOTT              3000                                                         
+KING               5000                                                         
+TURNER             1500                                                         
+ADAMS              1100                                                         
+
+ENAME      TOTAL_SALARY                                                         
+---------- ------------                                                         
+JAMES               950                                                         
+FORD               3000                                                         
+MILLER             1300                                                         
+
+14 rows selected.
+
+SQL> select ENAME, SAL+COMM as Salary from emp;
+
+ENAME          SALARY                                                           
+---------- ----------                                                           
+SMITH                                                                           
+ALLEN            1900                                                           
+WARD             1750                                                           
+JONES                                                                           
+MARTIN           2650                                                           
+BLAKE                                                                           
+CLARK                                                                           
+SCOTT                                                                           
+KING                                                                            
+TURNER           1500                                                           
+ADAMS                                                                           
+
+ENAME          SALARY                                                           
+---------- ----------                                                           
+JAMES                                                                           
+FORD                                                                            
+MILLER                                                                          
+
+14 rows selected.
+
+SQL> --9 WAQTD DETAILS OF ALL THE EMPLOYEES ALONG WITH ANNUAL SALARY.
+SQL> SELECT emp.*, SAL * 12 AS Annual_Salary
+  2  FROM emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO ANNUAL_SALARY                                                        
+---------- -------------                                                        
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20          9600                                                        
+                                                                                
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300      
+        30         19200                                                        
+                                                                                
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500      
+        30         15000                                                        
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO ANNUAL_SALARY                                                        
+---------- -------------                                                        
+      7566 JONES      MANAGER         7839 02-APR-81       2975                 
+        20         35700                                                        
+                                                                                
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400      
+        30         15000                                                        
+                                                                                
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                 
+        30         34200                                                        
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO ANNUAL_SALARY                                                        
+---------- -------------                                                        
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                 
+        10         29400                                                        
+                                                                                
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                 
+        20         36000                                                        
+                                                                                
+      7839 KING       PRESIDENT            17-NOV-81       5000                 
+        10         60000                                                        
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO ANNUAL_SALARY                                                        
+---------- -------------                                                        
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0      
+        30         18000                                                        
+                                                                                
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                 
+        20         13200                                                        
+                                                                                
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30         11400                                                        
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO ANNUAL_SALARY                                                        
+---------- -------------                                                        
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20         36000                                                        
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10         15600                                                        
+                                                                                
+
+14 rows selected.
+
+SQL> --10 WAQTD NAME AND DESIGNATION ALONG WITH 100 PENALTY IN SALARY.
+SQL> SELECT ENAME, JOB, SAL - 100 AS Salary_After_Penalty
+  2  FROM emp;
+
+ENAME      JOB       SALARY_AFTER_PENALTY                                       
+---------- --------- --------------------                                       
+SMITH      CLERK                      700                                       
+ALLEN      SALESMAN                  1500                                       
+WARD       SALESMAN                  1150                                       
+JONES      MANAGER                   2875                                       
+MARTIN     SALESMAN                  1150                                       
+BLAKE      MANAGER                   2750                                       
+CLARK      MANAGER                   2350                                       
+SCOTT      ANALYST                   2900                                       
+KING       PRESIDENT                 4900                                       
+TURNER     SALESMAN                  1400                                       
+ADAMS      CLERK                     1000                                       
+
+ENAME      JOB       SALARY_AFTER_PENALTY                                       
+---------- --------- --------------------                                       
+JAMES      CLERK                      850                                       
+FORD       ANALYST                   2900                                       
+MILLER     CLERK                     1200                                       
+
+14 rows selected.
+
+SQL> spool off;
