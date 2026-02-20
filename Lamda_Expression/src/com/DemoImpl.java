@@ -3,8 +3,8 @@ package com;
 public class DemoImpl  implements Demo{
 	
 	@Override
-	public void sample() {
-		System.out.println("Given Implementation By using DemoImpl");
+	public int sample(int num1, int num2) {
+		return num1+num2;
 	}
 
 }
