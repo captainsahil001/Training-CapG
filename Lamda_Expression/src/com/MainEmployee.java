@@ -3,7 +3,9 @@ package com;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @SuppressWarnings("unused")
@@ -25,7 +27,14 @@ public class MainEmployee {
 		System.out.println("--------------------------------------------");
 		
 		// Another part
-		list.stream().filter(emp->emp.getSalary()<10000).forEach(System.out::println);	 
+		List<EmployeeDetails> lessTen =
+		        	list.stream()
+		            .filter(emp -> emp.getSalary() < 10000)
+		            .collect(Collectors.toList());
+
+		lessTen.forEach(System.out::println);
+		
+		
 		System.out.println("--------------------------------------------");
 
 		
@@ -35,6 +44,50 @@ public class MainEmployee {
 		        .collect(Collectors.toList());
 		
 		updatedEmployees.forEach(System.out::println);
+		
+		System.out.println("--------------------------------------------");
+		
+		
+		// Another part
+		Set<Integer> uniqDept = new HashSet<>();
+
+		List<EmployeeDetails> uniqueDeptEmployees =
+		        list.stream()
+		            .filter(emp -> uniqDept.add(emp.getDeptno()))
+		            .collect(Collectors.toList());
+
+		uniqueDeptEmployees.forEach(System.out::println);
+		
+		System.out.println("--------------------------------------------");
+		
+		
+		// Another part
+		// Return distinct or unique 1 value ->
+		EmployeeDetails minSal = list.stream()
+				.min((emp1,emp2)-> Double.compare(emp1.getSalary(),emp2.getSalary())).get();
+		System.out.println(minSal);
+		
+		System.out.println("--------------------------------------------");
+		
+		// Returns list of values if they got same and are minimum too ->
+		double minSale =
+		        list.stream()
+		            .mapToDouble(EmployeeDetails::getSalary)
+		            .min()
+		            .orElseThrow();
+		
+		List<EmployeeDetails> minSalEmp =
+		        list.stream()
+		            .filter(emp -> emp.getSalary() == minSale)
+		            .collect(Collectors.toList());
+
+		minSalEmp.forEach(System.out::println);
+		
+		System.out.println("--------------------------------------------");
+
+		        
+		
+		
 		
 
 		        
