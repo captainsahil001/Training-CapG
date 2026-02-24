@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
@@ -42,7 +43,7 @@ public class Main {
 		
 		/* Write on the existing created file*/
 		
-//		FileWriter filewr = new FileWriter("C:\\Users\\sahil\\Desktop\\Training(CapG)\\FileHandling\\src\\IEM\\demo.txt");
+		FileWriter filewr = new FileWriter("C:\\Users\\sahil\\Desktop\\Training(CapG)\\FileHandling\\src\\IEM\\demo.txt");
 //		
 //		filewr.write(97);
 //		filewr.write("My name is Dinga");
@@ -95,6 +96,17 @@ public class Main {
         }
 
         buffre.close();
+        
+        // PrintWriter will create and write string char doub int float etc type of data on the file in a same line or in a next line.
+        PrintWriter printwr = new PrintWriter(filewr);
+        printwr.println("My name is Rani");
+        printwr.println('F');
+        printwr.print(55);
+        printwr.print(true);
+        printwr.print(99.9d);
+        printwr.flush();
+        printwr.close();
+        
 	}
 
 }
