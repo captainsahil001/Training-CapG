@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\sahil\Desktop\Training(CapG)\hibernate"/>
 			<item value="C:\Users\sahil\Desktop\java-repo-master"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -15,6 +16,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\sahil\Desktop\Training(CapG)\user_management_system\src\main\java\com\UpdateEmailIdByUsingUserId.java"/>
 			<item value="C:\Users\sahil\Desktop\Training(CapG)\Student_Managment_System\src\main\java\com\SelectAllEmployees.java"/>
 			<item value="C:\Users\sahil\Desktop\Training(CapG)\Maven_Project\src\main\java\org\App.java"/>
 			<item value="C:\Users\sahil\Desktop\Training(CapG)\Maven_Project"/>
@@ -52,6 +54,8 @@
 			<item value="org"/>
 		</list>
 		<list key="artifactId">
+			<item value="CreationOfBeanByUsingAnnotationConfiguration"/>
+			<item value="user_management_system"/>
 			<item value="Student_Management_System"/>
 			<item value="E_Commerce"/>
 			<item value="Student_Managment_System"/>
