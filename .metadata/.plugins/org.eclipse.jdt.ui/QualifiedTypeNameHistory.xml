@@ -20,4 +20,6 @@
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
+    <fullyQualifiedTypeName name="DAO.ProductDAO"/>
+    <fullyQualifiedTypeName name="com.DAO.ProductDAOImpl"/>
 </qualifiedTypeNameHistroy>

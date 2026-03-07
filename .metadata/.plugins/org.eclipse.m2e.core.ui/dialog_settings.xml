@@ -16,6 +16,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\sahil\Desktop\Training(CapG)\Product_Management"/>
 			<item value="C:\Users\sahil\Desktop\Training(CapG)\user_management_system\src\main\java\com\UpdateEmailIdByUsingUserId.java"/>
 			<item value="C:\Users\sahil\Desktop\Training(CapG)\Student_Managment_System\src\main\java\com\SelectAllEmployees.java"/>
 			<item value="C:\Users\sahil\Desktop\Training(CapG)\Maven_Project\src\main\java\org\App.java"/>
@@ -50,10 +51,13 @@
 			<item value="org"/>
 		</list>
 		<list key="groupId">
+			<item value="com.cms"/>
 			<item value="com"/>
 			<item value="org"/>
 		</list>
 		<list key="artifactId">
+			<item value="Customer_Management_System"/>
+			<item value="Product_Management"/>
 			<item value="CreationOfBeanByUsingAnnotationConfiguration"/>
 			<item value="user_management_system"/>
 			<item value="Student_Management_System"/>
