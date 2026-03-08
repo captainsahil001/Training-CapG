@@ -3,36 +3,46 @@ package com.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="product")
+@Table(name = "product")
 public class Product {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int productId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "product_id")
+	private int id;
 
-    private String productName;
-    private String category;
-    private double price;
+	@Column(name = "product_name")
+	private String name;
 
-    public Product() {}
+	@Column(name = "product_category")
+	private String category;
 
-    public Product(String productName, String category, double price) {
-        this.productName = productName;
-        this.category = category;
-        this.price = price;
-    }
+	@Column(name = "product_price")
+	private double price;
 
-    public int getProductId() { return productId; }
-    public String getProductName() { return productName; }
-    public String getCategory() { return category; }
-    public double getPrice() { return price; }
+	public Product() {
+	}
 
-    public void setProductId(int productId) { this.productId = productId; }
-    public void setProductName(String productName) { this.productName = productName; }
-    public void setCategory(String category) { this.category = category; }
-    public void setPrice(double price) { this.price = price; }
+	public Product(String name, String category, double price) {
+		this.name = name;
+		this.category = category;
+		this.price = price;
+	}
 
-    public String toString() {
-        return productId+" "+productName+" "+category+" "+price;
-    }
+	public int getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
 }
