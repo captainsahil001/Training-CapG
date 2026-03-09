@@ -53,50 +53,5 @@
 			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/sahil/.m2/repository/org/springframework/spring-orm/5.3.30/spring-orm-5.3.30.jar" sourcepath="C:/Users/sahil/.m2/repository/org/springframework/spring-orm/5.3.30/spring-orm-5.3.30-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.springframework"/>
-			<attribute name="maven.artifactId" value="spring-orm"/>
-			<attribute name="maven.version" value="5.3.30"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/sahil/.m2/repository/org/springframework/spring-tx/5.3.30/spring-tx-5.3.30.jar" sourcepath="C:/Users/sahil/.m2/repository/org/springframework/spring-tx/5.3.30/spring-tx-5.3.30-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.springframework"/>
-			<attribute name="maven.artifactId" value="spring-tx"/>
-			<attribute name="maven.version" value="5.3.30"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/sahil/.m2/repository/org/hibernate/hibernate-core/5.5.0.Final/hibernate-core-5.5.0.Final.jar" sourcepath="C:/Users/sahil/.m2/repository/org/hibernate/hibernate-core/5.5.0.Final/hibernate-core-5.5.0.Final-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.hibernate"/>
-			<attribute name="maven.artifactId" value="hibernate-core"/>
-			<attribute name="maven.version" value="5.5.0.Final"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/sahil/.m2/repository/org/hibernate/hibernate-core/5.6.15.Final/hibernate-core-5.6.15.Final.jar" sourcepath="C:/Users/sahil/.m2/repository/org/hibernate/hibernate-core/5.6.15.Final/hibernate-core-5.6.15.Final-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.hibernate"/>
-			<attribute name="maven.artifactId" value="hibernate-core"/>
-			<attribute name="maven.version" value="5.6.15.Final"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/sahil/.m2/repository/org/springframework/spring-context/5.2.24.RELEASE/spring-context-5.2.24.RELEASE.jar" sourcepath="C:/Users/sahil/.m2/repository/org/springframework/spring-context/5.2.24.RELEASE/spring-context-5.2.24.RELEASE-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.springframework"/>
-			<attribute name="maven.artifactId" value="spring-context"/>
-			<attribute name="maven.version" value="5.2.24.RELEASE"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
