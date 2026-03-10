@@ -1,0 +1,24 @@
+DevOps Principles - 
+-----------------------
+1. Customer-Centric actions.
+2. End-To-End responsibility.
+3. Continuous improvement.
+4. Automate everything.
+5. Work as one team. 
+6. Monitor and test everything.
+
+
+CI/CD FLOW -
+-----------
+
+Developer
+    | git push
+    |
+Git Repository(GitHub/Local)
+    | Webhook / Poll SCM
+    |
+Jenkins Pipeline
+ |Checkout Code
+ |Build
+ |Test
+ |Deploy
