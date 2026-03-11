@@ -51,11 +51,12 @@
 			<item value="org"/>
 		</list>
 		<list key="groupId">
-			<item value="com.cms"/>
 			<item value="com"/>
+			<item value="com.cms"/>
 			<item value="org"/>
 		</list>
 		<list key="artifactId">
+			<item value="Jenkins_CICD"/>
 			<item value="Customer_Management_System"/>
 			<item value="Product_Management"/>
 			<item value="CreationOfBeanByUsingAnnotationConfiguration"/>
