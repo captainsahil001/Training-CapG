@@ -46,16 +46,22 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.iem"/>
+			<item value="com.iem.Jenkins_Webapp"/>
 			<item value="com"/>
 			<item value="org.Maven_2nd_Project"/>
 			<item value="org"/>
 		</list>
 		<list key="groupId">
+			<item value="com.iem"/>
 			<item value="com"/>
 			<item value="com.cms"/>
 			<item value="org"/>
 		</list>
 		<list key="artifactId">
+			<item value="portfolio"/>
+			<item value="jenkins_webapp"/>
+			<item value="Jenkins_Webapp"/>
 			<item value="Jenkins_CICD"/>
 			<item value="Customer_Management_System"/>
 			<item value="Product_Management"/>
