@@ -46,19 +46,20 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com"/>
 			<item value="com.iem"/>
 			<item value="com.iem.Jenkins_Webapp"/>
-			<item value="com"/>
 			<item value="org.Maven_2nd_Project"/>
 			<item value="org"/>
 		</list>
 		<list key="groupId">
-			<item value="com.iem"/>
 			<item value="com"/>
+			<item value="com.iem"/>
 			<item value="com.cms"/>
 			<item value="org"/>
 		</list>
 		<list key="artifactId">
+			<item value="Employee_Management_Using_Spring_Core"/>
 			<item value="portfolio"/>
 			<item value="jenkins_webapp"/>
 			<item value="Jenkins_Webapp"/>
@@ -73,7 +74,6 @@
 			<item value="Maven_2nd_Project"/>
 			<item value="Maven_Project"/>
 			<item value="first_Maven_Project"/>
-			<item value="First_Maven_Project"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
