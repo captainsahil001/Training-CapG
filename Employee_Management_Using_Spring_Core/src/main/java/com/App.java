@@ -18,6 +18,9 @@ public class App
 //        System.out.println(conn);
         
         EmployeeDataBaseOperations op = context.getBean(EmployeeDataBaseOperations.class);
-        op.insertEmployeeDetails();
+//        op.insertEmployeeDetails();
+//        op.getEmployeeUsingId(1);
+//        op.UpdateSalaryUsingDeptNo(30000, 11);
+        op.DeleteDetailsOfEmployeeUsingId(2);
     }
 }
